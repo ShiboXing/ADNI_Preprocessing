@@ -1,0 +1,6 @@
+This directory contains version and general utility files.
+The files are used to build GlobalIgns library.
+File version.h contains the current version number and is included in applications
+to display version number in the about dialog.
+File ignsconfig contains names of configuration files, some are used only in tests.
+File ignsmsg.h is intended for messages, to slowly replace the hardcoded strings.

@@ -1,0 +1,318 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>OpenDataFileDialogBase</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>OpenDataFileDialogBase</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>366</width>
+            <height>285</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Open File</string>
+    </property>
+    <property name="sizeGripEnabled">
+        <bool>false</bool>
+    </property>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>browsePushButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>315</x>
+                <y>12</y>
+                <width>40</width>
+                <height>24</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>...</string>
+        </property>
+    </widget>
+    <widget class="QLineEdit">
+        <property name="name">
+            <cstring>openFileLineEdit</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>13</x>
+                <y>13</y>
+                <width>298</width>
+                <height>22</height>
+            </rect>
+        </property>
+        <property name="readOnly">
+            <bool>true</bool>
+        </property>
+    </widget>
+    <widget class="QLayoutWidget">
+        <property name="name">
+            <cstring>Layout1</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>12</x>
+                <y>239</y>
+                <width>344</width>
+                <height>26</height>
+            </rect>
+        </property>
+        <hbox>
+            <property name="name">
+                <cstring>unnamed</cstring>
+            </property>
+            <property name="margin">
+                <number>0</number>
+            </property>
+            <property name="spacing">
+                <number>6</number>
+            </property>
+            <spacer>
+                <property name="name">
+                    <cstring>Horizontal Spacing2</cstring>
+                </property>
+                <property name="orientation">
+                    <enum>Horizontal</enum>
+                </property>
+                <property name="sizeType">
+                    <enum>Expanding</enum>
+                </property>
+                <property name="sizeHint">
+                    <size>
+                        <width>20</width>
+                        <height>20</height>
+                    </size>
+                </property>
+            </spacer>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>buttonOk</cstring>
+                </property>
+                <property name="text">
+                    <string>&amp;OK</string>
+                </property>
+                <property name="accel">
+                    <string></string>
+                </property>
+                <property name="autoDefault">
+                    <bool>true</bool>
+                </property>
+                <property name="default">
+                    <bool>true</bool>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>buttonCancel</cstring>
+                </property>
+                <property name="text">
+                    <string>&amp;Cancel</string>
+                </property>
+                <property name="accel">
+                    <string></string>
+                </property>
+                <property name="autoDefault">
+                    <bool>true</bool>
+                </property>
+            </widget>
+        </hbox>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>transformTextLabel</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>13</x>
+                <y>204</y>
+                <width>140</width>
+                <height>22</height>
+            </rect>
+        </property>
+        <property name="maximumSize">
+            <size>
+                <width>140</width>
+                <height>32767</height>
+            </size>
+        </property>
+        <property name="text">
+            <string>Transformation:</string>
+        </property>
+    </widget>
+    <widget class="QButtonGroup">
+        <property name="name">
+            <cstring>dataTypeButtonGroup</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>13</x>
+                <y>103</y>
+                <width>344</width>
+                <height>56</height>
+            </rect>
+        </property>
+        <property name="title">
+            <string>Data Type</string>
+        </property>
+        <widget class="QRadioButton">
+            <property name="name">
+                <cstring>preopRadioButton</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>14</x>
+                    <y>24</y>
+                    <width>153</width>
+                    <height>16</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Pre-operative</string>
+            </property>
+            <property name="checked">
+                <bool>true</bool>
+            </property>
+            <property name="buttonGroupId">
+                <number>0</number>
+            </property>
+        </widget>
+        <widget class="QRadioButton">
+            <property name="name">
+                <cstring>intraopRadioButton</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>186</x>
+                    <y>24</y>
+                    <width>150</width>
+                    <height>16</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Intra-operative</string>
+            </property>
+            <property name="buttonGroupId">
+                <number>1</number>
+            </property>
+        </widget>
+    </widget>
+    <widget class="QCheckBox">
+        <property name="name">
+            <cstring>referenceImageTypeCheckBox</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>13</x>
+                <y>174</y>
+                <width>344</width>
+                <height>21</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Reference Image</string>
+        </property>
+    </widget>
+    <widget class="QComboBox">
+        <property name="name">
+            <cstring>transformComboBox</cstring>
+        </property>
+        <property name="enabled">
+            <bool>false</bool>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>169</x>
+                <y>204</y>
+                <width>191</width>
+                <height>22</height>
+            </rect>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>objectNameTextLabel</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>18</x>
+                <y>43</y>
+                <width>299</width>
+                <height>20</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Name (optional)</string>
+        </property>
+    </widget>
+    <widget class="QLineEdit">
+        <property name="name">
+            <cstring>objectNameLineEdit</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>13</x>
+                <y>70</y>
+                <width>339</width>
+                <height>22</height>
+            </rect>
+        </property>
+        <property name="alignment">
+            <set>AlignLeft</set>
+        </property>
+        <property name="readOnly">
+            <bool>false</bool>
+        </property>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>buttonOk</sender>
+        <signal>clicked()</signal>
+        <receiver>OpenDataFileDialogBase</receiver>
+        <slot>OKButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>buttonCancel</sender>
+        <signal>clicked()</signal>
+        <receiver>OpenDataFileDialogBase</receiver>
+        <slot>reject()</slot>
+    </connection>
+    <connection>
+        <sender>browsePushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>OpenDataFileDialogBase</receiver>
+        <slot>BrowsePushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>dataTypeButtonGroup</sender>
+        <signal>clicked(int)</signal>
+        <receiver>OpenDataFileDialogBase</receiver>
+        <slot>DataTypeSelected(int)</slot>
+    </connection>
+    <connection>
+        <sender>transformComboBox</sender>
+        <signal>activated(const QString&amp;)</signal>
+        <receiver>OpenDataFileDialogBase</receiver>
+        <slot>TransformComboBoxActivated(const QString&amp;)</slot>
+    </connection>
+    <connection>
+        <sender>referenceImageTypeCheckBox</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>OpenDataFileDialogBase</receiver>
+        <slot>ReferenceImageTypeCheckBoxToggled(bool)</slot>
+    </connection>
+</connections>
+<slots>
+    <slot>BrowsePushButtonClicked()</slot>
+    <slot>OKButtonClicked()</slot>
+    <slot>DataTypeSelected(int)</slot>
+    <slot>TransformComboBoxActivated(const QString &amp;)</slot>
+    <slot>ReferenceImageTypeCheckBoxToggled(bool)</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

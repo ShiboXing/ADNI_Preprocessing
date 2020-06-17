@@ -1,0 +1,150 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>TransformationSettingsDialogBase</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>TransformationSettingsDialogBase</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>219</width>
+            <height>155</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Set Transform</string>
+    </property>
+    <property name="sizeGripEnabled">
+        <bool>false</bool>
+    </property>
+    <property name="modal">
+        <bool>false</bool>
+    </property>
+    <widget class="QLayoutWidget">
+        <property name="name">
+            <cstring>Layout1</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>9</x>
+                <y>119</y>
+                <width>197</width>
+                <height>33</height>
+            </rect>
+        </property>
+        <hbox>
+            <property name="name">
+                <cstring>unnamed</cstring>
+            </property>
+            <property name="margin">
+                <number>3</number>
+            </property>
+            <property name="spacing">
+                <number>6</number>
+            </property>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>buttonOk</cstring>
+                </property>
+                <property name="text">
+                    <string>&amp;OK</string>
+                </property>
+                <property name="accel">
+                    <string></string>
+                </property>
+                <property name="autoDefault">
+                    <bool>true</bool>
+                </property>
+                <property name="default">
+                    <bool>true</bool>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>buttonCancel</cstring>
+                </property>
+                <property name="text">
+                    <string>&amp;Cancel</string>
+                </property>
+                <property name="accel">
+                    <string></string>
+                </property>
+                <property name="autoDefault">
+                    <bool>true</bool>
+                </property>
+            </widget>
+        </hbox>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>transformNameTextLabel</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>11</x>
+                <y>11</y>
+                <width>194</width>
+                <height>24</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Transformation Name:</string>
+        </property>
+    </widget>
+    <widget class="QLineEdit">
+        <property name="name">
+            <cstring>transformationNameLineEdit</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>11</x>
+                <y>44</y>
+                <width>200</width>
+                <height>24</height>
+            </rect>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>transformMatrixPushButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>10</x>
+                <y>82</y>
+                <width>200</width>
+                <height>24</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Transformation Matrix</string>
+        </property>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>buttonOk</sender>
+        <signal>clicked()</signal>
+        <receiver>TransformationSettingsDialogBase</receiver>
+        <slot>OKPushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>buttonCancel</sender>
+        <signal>clicked()</signal>
+        <receiver>TransformationSettingsDialogBase</receiver>
+        <slot>reject()</slot>
+    </connection>
+    <connection>
+        <sender>transformMatrixPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>TransformationSettingsDialogBase</receiver>
+        <slot>TransformationMatrixPushButtonClicked()</slot>
+    </connection>
+</connections>
+<slots>
+    <slot>TransformationMatrixPushButtonClicked()</slot>
+    <slot>OKPushButtonClicked()</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

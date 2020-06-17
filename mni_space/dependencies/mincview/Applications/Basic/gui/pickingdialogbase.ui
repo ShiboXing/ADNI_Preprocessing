@@ -1,0 +1,429 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>PickingDialogBase</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>PickingDialogBase</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>381</width>
+            <height>408</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Picking</string>
+    </property>
+    <property name="sizeGripEnabled">
+        <bool>false</bool>
+    </property>
+    <widget class="QLayoutWidget">
+        <property name="name">
+            <cstring>layout3</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>4</x>
+                <y>4</y>
+                <width>373</width>
+                <height>400</height>
+            </rect>
+        </property>
+        <grid>
+            <property name="name">
+                <cstring>unnamed</cstring>
+            </property>
+            <property name="margin">
+                <number>2</number>
+            </property>
+            <property name="spacing">
+                <number>2</number>
+            </property>
+            <widget class="QGroupBox" row="0" column="1">
+                <property name="name">
+                    <cstring>tagSizeGroupBox</cstring>
+                </property>
+                <property name="maximumSize">
+                    <size>
+                        <width>32767</width>
+                        <height>32767</height>
+                    </size>
+                </property>
+                <property name="title">
+                    <string>Set Tag Size</string>
+                </property>
+                <widget class="QSpinBox">
+                    <property name="name">
+                        <cstring>tagSizeSpinBox</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>63</x>
+                            <y>42</y>
+                            <width>41</width>
+                            <height>24</height>
+                        </rect>
+                    </property>
+                    <property name="prefix">
+                        <string></string>
+                    </property>
+                    <property name="suffix">
+                        <string></string>
+                    </property>
+                </widget>
+            </widget>
+            <widget class="QButtonGroup" row="0" column="0">
+                <property name="name">
+                    <cstring>selectObjectButtonGroup</cstring>
+                </property>
+                <property name="maximumSize">
+                    <size>
+                        <width>32767</width>
+                        <height>32767</height>
+                    </size>
+                </property>
+                <property name="title">
+                    <string>Select Pickable Object</string>
+                </property>
+                <widget class="QRadioButton">
+                    <property name="name">
+                        <cstring>objectRadioButton</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>33</x>
+                            <y>56</y>
+                            <width>117</width>
+                            <height>19</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Object</string>
+                    </property>
+                    <property name="buttonGroupId">
+                        <number>1</number>
+                    </property>
+                </widget>
+                <widget class="QRadioButton">
+                    <property name="name">
+                        <cstring>surfaceRadioButton</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>34</x>
+                            <y>25</y>
+                            <width>117</width>
+                            <height>19</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Surface</string>
+                    </property>
+                    <property name="buttonGroupId">
+                        <number>0</number>
+                    </property>
+                </widget>
+            </widget>
+            <widget class="QListView" row="2" column="0" rowspan="1" colspan="2">
+                <column>
+                    <property name="text">
+                        <string>Column 1</string>
+                    </property>
+                    <property name="clickable">
+                        <bool>true</bool>
+                    </property>
+                    <property name="resizable">
+                        <bool>true</bool>
+                    </property>
+                </column>
+            <item>
+                <property name="text">
+                    <string>New Item</string>
+                </property>
+                <property name="pixmap">
+                    <pixmap></pixmap>
+                </property>
+            </item>
+                <property name="name">
+                    <cstring>pointListView</cstring>
+                </property>
+                <property name="margin">
+                    <number>0</number>
+                </property>
+                <property name="resizePolicy">
+                    <enum>Manual</enum>
+                </property>
+                <property name="showToolTips">
+                    <bool>false</bool>
+                </property>
+            </widget>
+            <widget class="QLayoutWidget" row="3" column="0" rowspan="1" colspan="2">
+                <property name="name">
+                    <cstring>Layout1</cstring>
+                </property>
+                <hbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <property name="margin">
+                        <number>2</number>
+                    </property>
+                    <property name="spacing">
+                        <number>6</number>
+                    </property>
+                    <widget class="QPushButton">
+                        <property name="name">
+                            <cstring>savePushButton</cstring>
+                        </property>
+                        <property name="text">
+                            <string>&amp;Save</string>
+                        </property>
+                        <property name="accel">
+                            <string>Alt+S</string>
+                        </property>
+                        <property name="autoDefault">
+                            <bool>true</bool>
+                        </property>
+                    </widget>
+                    <spacer>
+                        <property name="name">
+                            <cstring>Horizontal Spacing2</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Horizontal</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>20</height>
+                            </size>
+                        </property>
+                    </spacer>
+                    <widget class="QPushButton">
+                        <property name="name">
+                            <cstring>okPushButtonutton</cstring>
+                        </property>
+                        <property name="text">
+                            <string>&amp;OK</string>
+                        </property>
+                        <property name="accel">
+                            <string></string>
+                        </property>
+                        <property name="autoDefault">
+                            <bool>true</bool>
+                        </property>
+                        <property name="default">
+                            <bool>true</bool>
+                        </property>
+                    </widget>
+                    <widget class="QPushButton">
+                        <property name="name">
+                            <cstring>cancelPushButton</cstring>
+                        </property>
+                        <property name="text">
+                            <string>&amp;Cancel</string>
+                        </property>
+                        <property name="accel">
+                            <string></string>
+                        </property>
+                        <property name="autoDefault">
+                            <bool>true</bool>
+                        </property>
+                    </widget>
+                </hbox>
+            </widget>
+            <widget class="QButtonGroup" row="1" column="0" rowspan="1" colspan="2">
+                <property name="name">
+                    <cstring>actionsButtonGroup</cstring>
+                </property>
+                <property name="maximumSize">
+                    <size>
+                        <width>32767</width>
+                        <height>44</height>
+                    </size>
+                </property>
+                <property name="title">
+                    <string></string>
+                </property>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>clearSelectedPushButton</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>5</x>
+                            <y>11</y>
+                            <width>116</width>
+                            <height>26</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Clear Selected</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>loadTagPushButton</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>283</x>
+                            <y>11</y>
+                            <width>83</width>
+                            <height>26</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Load Tags</string>
+                    </property>
+                </widget>
+                <spacer>
+                    <property name="name">
+                        <cstring>spacer2_2</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>30</width>
+                            <height>16</height>
+                        </size>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>243</x>
+                            <y>16</y>
+                            <width>30</width>
+                            <height>16</height>
+                        </rect>
+                    </property>
+                </spacer>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>clearAllPushButton</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>156</x>
+                            <y>10</y>
+                            <width>81</width>
+                            <height>26</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Clear All</string>
+                    </property>
+                </widget>
+                <spacer>
+                    <property name="name">
+                        <cstring>spacer2</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>25</width>
+                            <height>16</height>
+                        </size>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>127</x>
+                            <y>20</y>
+                            <width>25</width>
+                            <height>16</height>
+                        </rect>
+                    </property>
+                </spacer>
+            </widget>
+        </grid>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>okPushButtonutton</sender>
+        <signal>clicked()</signal>
+        <receiver>PickingDialogBase</receiver>
+        <slot>OkPushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>cancelPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>PickingDialogBase</receiver>
+        <slot>CancelPushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>savePushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>PickingDialogBase</receiver>
+        <slot>SavePushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>selectObjectButtonGroup</sender>
+        <signal>clicked(int)</signal>
+        <receiver>PickingDialogBase</receiver>
+        <slot>SelectObjectButtonGroupClicked(int)</slot>
+    </connection>
+    <connection>
+        <sender>clearSelectedPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>PickingDialogBase</receiver>
+        <slot>ClearSelectedPushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>clearAllPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>PickingDialogBase</receiver>
+        <slot>ClearAllPushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>loadTagPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>PickingDialogBase</receiver>
+        <slot>LoadTagsPushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>pointListView</sender>
+        <signal>clicked(QListViewItem*)</signal>
+        <receiver>PickingDialogBase</receiver>
+        <slot>PointFromListSelected(QListViewItem*)</slot>
+    </connection>
+    <connection>
+        <sender>pointListView</sender>
+        <signal>doubleClicked(QListViewItem*)</signal>
+        <receiver>PickingDialogBase</receiver>
+        <slot>EditPoint(QListViewItem*)</slot>
+    </connection>
+    <connection>
+        <sender>tagSizeSpinBox</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>PickingDialogBase</receiver>
+        <slot>TagSizeSpinBoxValueChanged(int)</slot>
+    </connection>
+</connections>
+<slots>
+    <slot>OkPushButtonClicked()</slot>
+    <slot>CancelPushButtonClicked()</slot>
+    <slot>SavePushButtonClicked()</slot>
+    <slot>SelectObjectButtonGroupClicked(int)</slot>
+    <slot>ClearSelectedPushButtonClicked()</slot>
+    <slot>ClearAllPushButtonClicked()</slot>
+    <slot>LoadTagsPushButtonClicked()</slot>
+    <slot>EditPoint(QListViewItem*)</slot>
+    <slot>PointFromListSelected(QListViewItem*)</slot>
+    <slot>TagSizeSpinBoxValueChanged(int)</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

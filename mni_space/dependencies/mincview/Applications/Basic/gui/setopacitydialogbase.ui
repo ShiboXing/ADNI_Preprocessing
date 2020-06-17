@@ -1,0 +1,124 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>SetOpacityDialogBase</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>SetOpacityDialogBase</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>203</width>
+            <height>175</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Set Opacity</string>
+    </property>
+    <property name="sizeGripEnabled">
+        <bool>true</bool>
+    </property>
+    <widget class="QLayoutWidget">
+        <property name="name">
+            <cstring>Layout1</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>8</x>
+                <y>131</y>
+                <width>181</width>
+                <height>33</height>
+            </rect>
+        </property>
+        <hbox>
+            <property name="name">
+                <cstring>unnamed</cstring>
+            </property>
+            <property name="margin">
+                <number>0</number>
+            </property>
+            <property name="spacing">
+                <number>6</number>
+            </property>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>buttonOk</cstring>
+                </property>
+                <property name="text">
+                    <string>&amp;OK</string>
+                </property>
+                <property name="accel">
+                    <string></string>
+                </property>
+                <property name="autoDefault">
+                    <bool>true</bool>
+                </property>
+                <property name="default">
+                    <bool>true</bool>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>buttonCancel</cstring>
+                </property>
+                <property name="text">
+                    <string>&amp;Cancel</string>
+                </property>
+                <property name="accel">
+                    <string></string>
+                </property>
+                <property name="autoDefault">
+                    <bool>true</bool>
+                </property>
+            </widget>
+        </hbox>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>opacityTextLabel</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>17</x>
+                <y>20</y>
+                <width>163</width>
+                <height>37</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Opacity ( 0% - 100%):</string>
+        </property>
+    </widget>
+    <widget class="QLineEdit">
+        <property name="name">
+            <cstring>opacityLineEdit</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>63</x>
+                <y>77</y>
+                <width>70</width>
+                <height>35</height>
+            </rect>
+        </property>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>buttonOk</sender>
+        <signal>clicked()</signal>
+        <receiver>SetOpacityDialogBase</receiver>
+        <slot>OkButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>buttonCancel</sender>
+        <signal>clicked()</signal>
+        <receiver>SetOpacityDialogBase</receiver>
+        <slot>reject()</slot>
+    </connection>
+</connections>
+<slots>
+    <slot>OkButtonClicked()</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

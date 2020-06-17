@@ -1,0 +1,438 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>DoubleViewWindowBase</class>
+<widget class="QWidget">
+    <property name="name">
+        <cstring>DoubleViewWindowBase</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>1306</width>
+            <height>530</height>
+        </rect>
+    </property>
+    <property name="minimumSize">
+        <size>
+            <width>1306</width>
+            <height>520</height>
+        </size>
+    </property>
+    <property name="caption">
+        <string>DoubleView</string>
+    </property>
+    <widget class="QGroupBox">
+        <property name="name">
+            <cstring>rightGroupBox</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>655</x>
+                <y>6</y>
+                <width>640</width>
+                <height>35</height>
+            </rect>
+        </property>
+        <property name="minimumSize">
+            <size>
+                <width>0</width>
+                <height>35</height>
+            </size>
+        </property>
+        <property name="maximumSize">
+            <size>
+                <width>32767</width>
+                <height>35</height>
+            </size>
+        </property>
+        <property name="title">
+            <string></string>
+        </property>
+        <widget class="QCheckBox">
+            <property name="name">
+                <cstring>blendCheckBox</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>9</x>
+                    <y>6</y>
+                    <width>77</width>
+                    <height>25</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Blend</string>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>decreaseOpacityPushButton</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>88</x>
+                    <y>6</y>
+                    <width>25</width>
+                    <height>25</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>&lt;</string>
+            </property>
+        </widget>
+        <widget class="QLabel">
+            <property name="name">
+                <cstring>percentTextLabel</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>531</x>
+                    <y>6</y>
+                    <width>19</width>
+                    <height>25</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>%</string>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>closePushButton</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>561</x>
+                    <y>6</y>
+                    <width>70</width>
+                    <height>25</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Close</string>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>increaseOpacityPushButton</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>438</x>
+                    <y>6</y>
+                    <width>25</width>
+                    <height>25</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>&gt;</string>
+            </property>
+        </widget>
+        <widget class="QSlider">
+            <property name="name">
+                <cstring>opacitySlider</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>126</x>
+                    <y>6</y>
+                    <width>301</width>
+                    <height>25</height>
+                </rect>
+            </property>
+            <property name="orientation">
+                <enum>Horizontal</enum>
+            </property>
+        </widget>
+        <widget class="QLineEdit">
+            <property name="name">
+                <cstring>opacityStepLineEdit</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>475</x>
+                    <y>5</y>
+                    <width>48</width>
+                    <height>24</height>
+                </rect>
+            </property>
+        </widget>
+    </widget>
+    <widget class="QFrame">
+        <property name="name">
+            <cstring>leftFrame</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>9</x>
+                <y>47</y>
+                <width>640</width>
+                <height>480</height>
+            </rect>
+        </property>
+        <property name="minimumSize">
+            <size>
+                <width>640</width>
+                <height>480</height>
+            </size>
+        </property>
+        <property name="frameShape">
+            <enum>StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+            <enum>Raised</enum>
+        </property>
+    </widget>
+    <widget class="QGroupBox">
+        <property name="name">
+            <cstring>leftGroupBox</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>9</x>
+                <y>6</y>
+                <width>640</width>
+                <height>35</height>
+            </rect>
+        </property>
+        <property name="minimumSize">
+            <size>
+                <width>0</width>
+                <height>35</height>
+            </size>
+        </property>
+        <property name="maximumSize">
+            <size>
+                <width>32767</width>
+                <height>35</height>
+            </size>
+        </property>
+        <property name="title">
+            <string></string>
+        </property>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>restoreViewsPushButton</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>10</x>
+                    <y>6</y>
+                    <width>70</width>
+                    <height>25</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Restore</string>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>decreaseGridStepPushButton</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>175</x>
+                    <y>6</y>
+                    <width>25</width>
+                    <height>25</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>&lt;</string>
+            </property>
+        </widget>
+        <widget class="QCheckBox">
+            <property name="name">
+                <cstring>gridCheckBox</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>93</x>
+                    <y>6</y>
+                    <width>50</width>
+                    <height>25</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Grid</string>
+            </property>
+        </widget>
+        <widget class="QLabel">
+            <property name="name">
+                <cstring>mmTextLabel</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>603</x>
+                    <y>6</y>
+                    <width>26</width>
+                    <height>26</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>mm</string>
+            </property>
+        </widget>
+        <widget class="QLineEdit">
+            <property name="name">
+                <cstring>gridStepLineEdit</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>551</x>
+                    <y>5</y>
+                    <width>46</width>
+                    <height>24</height>
+                </rect>
+            </property>
+        </widget>
+        <widget class="QSlider">
+            <property name="name">
+                <cstring>gridStepSlider</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>206</x>
+                    <y>6</y>
+                    <width>300</width>
+                    <height>26</height>
+                </rect>
+            </property>
+            <property name="orientation">
+                <enum>Horizontal</enum>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>increaseGridStepPushButton</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>516</x>
+                    <y>5</y>
+                    <width>25</width>
+                    <height>25</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>&gt;</string>
+            </property>
+        </widget>
+    </widget>
+    <widget class="QFrame">
+        <property name="name">
+            <cstring>rightFrame</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>655</x>
+                <y>47</y>
+                <width>640</width>
+                <height>480</height>
+            </rect>
+        </property>
+        <property name="minimumSize">
+            <size>
+                <width>640</width>
+                <height>480</height>
+            </size>
+        </property>
+        <property name="frameShape">
+            <enum>StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+            <enum>Raised</enum>
+        </property>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>gridCheckBox</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>DoubleViewWindowBase</receiver>
+        <slot>GridCheckBoxToggled()</slot>
+    </connection>
+    <connection>
+        <sender>gridStepSlider</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>DoubleViewWindowBase</receiver>
+        <slot>GridStepSliderValueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>restoreViewsPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>DoubleViewWindowBase</receiver>
+        <slot>RestoreViewsButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>increaseGridStepPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>DoubleViewWindowBase</receiver>
+        <slot>IncreaseGridStepButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>decreaseGridStepPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>DoubleViewWindowBase</receiver>
+        <slot>DecreaseGridStepButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>gridStepLineEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>DoubleViewWindowBase</receiver>
+        <slot>GridStepLineEditTextChanged(const QString&amp;)</slot>
+    </connection>
+    <connection>
+        <sender>blendCheckBox</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>DoubleViewWindowBase</receiver>
+        <slot>BlendCheckBoxToggled()</slot>
+    </connection>
+    <connection>
+        <sender>decreaseOpacityPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>DoubleViewWindowBase</receiver>
+        <slot>DecreaseOpacityButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>increaseOpacityPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>DoubleViewWindowBase</receiver>
+        <slot>IncreaseOpacityButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>closePushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>DoubleViewWindowBase</receiver>
+        <slot>CloseButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>opacitySlider</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>DoubleViewWindowBase</receiver>
+        <slot>OpacitySliderValueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>opacityStepLineEdit</sender>
+        <signal>returnPressed()</signal>
+        <receiver>DoubleViewWindowBase</receiver>
+        <slot>OpacityLineEditTextChanged()</slot>
+    </connection>
+</connections>
+<slots>
+    <slot>RestoreViewsButtonClicked()</slot>
+    <slot>CloseButtonClicked()</slot>
+    <slot>GridCheckBoxToggled()</slot>
+    <slot>BlendCheckBoxToggled()</slot>
+    <slot>DecreaseGridStepButtonClicked()</slot>
+    <slot>IncreaseGridStepButtonClicked()</slot>
+    <slot>GridStepLineEditTextChanged(const QString&amp;)</slot>
+    <slot>GridStepSliderValueChanged(int)</slot>
+    <slot>DecreaseOpacityButtonClicked()</slot>
+    <slot>IncreaseOpacityButtonClicked()</slot>
+    <slot>OpacitySliderValueChanged(int)</slot>
+    <slot>OpacityLineEditTextChanged()</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

@@ -1,0 +1,206 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>HardwareSettingsBase</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>HardwareSettingsBase</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>530</width>
+            <height>180</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Hardware Settings</string>
+    </property>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>DefaultSettingsLabel</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>20</x>
+                <y>10</y>
+                <width>490</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Default Hardware Settings</string>
+        </property>
+        <property name="alignment">
+            <set>AlignCenter</set>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>UserSettingsLabel</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>20</x>
+                <y>100</y>
+                <width>490</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>User Hardware Settings</string>
+        </property>
+        <property name="alignment">
+            <set>AlignCenter</set>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>DefaultHardwareSettingsFilename</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>20</x>
+                <y>50</y>
+                <width>490</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="font">
+            <font>
+                <pointsize>14</pointsize>
+                <bold>1</bold>
+            </font>
+        </property>
+        <property name="text">
+            <string></string>
+        </property>
+        <property name="textFormat">
+            <enum>AutoText</enum>
+        </property>
+        <property name="alignment">
+            <set>AlignCenter</set>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>UserSettingsBrowseButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>335</x>
+                <y>140</y>
+                <width>40</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>...</string>
+        </property>
+    </widget>
+    <widget class="QLineEdit">
+        <property name="name">
+            <cstring>UserSettingsLineEdit</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>20</x>
+                <y>140</y>
+                <width>305</width>
+                <height>30</height>
+            </rect>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>LoadUserSettingsButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>450</x>
+                <y>140</y>
+                <width>60</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Load</string>
+        </property>
+        <property name="on">
+            <bool>false</bool>
+        </property>
+        <property name="default">
+            <bool>true</bool>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>QuitButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>380</x>
+                <y>140</y>
+                <width>60</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Quit</string>
+        </property>
+        <property name="on">
+            <bool>false</bool>
+        </property>
+        <property name="autoDefault">
+            <bool>false</bool>
+        </property>
+        <property name="default">
+            <bool>false</bool>
+        </property>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>UserSettingsBrowseButton</sender>
+        <signal>pressed()</signal>
+        <receiver>HardwareSettingsBase</receiver>
+        <slot>FindUserSettingsFile()</slot>
+    </connection>
+    <connection>
+        <sender>LoadUserSettingsButton</sender>
+        <signal>pressed()</signal>
+        <receiver>HardwareSettingsBase</receiver>
+        <slot>LoadUserSettings()</slot>
+    </connection>
+    <connection>
+        <sender>UserSettingsLineEdit</sender>
+        <signal>returnPressed()</signal>
+        <receiver>HardwareSettingsBase</receiver>
+        <slot>UserSettingsChanged()</slot>
+    </connection>
+    <connection>
+        <sender>UserSettingsLineEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>HardwareSettingsBase</receiver>
+        <slot>ActivateLoadButton()</slot>
+    </connection>
+    <connection>
+        <sender>QuitButton</sender>
+        <signal>clicked()</signal>
+        <receiver>HardwareSettingsBase</receiver>
+        <slot>QuitApplication()</slot>
+    </connection>
+</connections>
+<tabstops>
+    <tabstop>UserSettingsLineEdit</tabstop>
+    <tabstop>LoadUserSettingsButton</tabstop>
+    <tabstop>UserSettingsBrowseButton</tabstop>
+</tabstops>
+<slots>
+    <slot>UserSettingsChanged()</slot>
+    <slot>LoadUserSettings()</slot>
+    <slot>ActivateLoadButton()</slot>
+    <slot>FindUserSettingsFile()</slot>
+    <slot>QuitApplication()</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

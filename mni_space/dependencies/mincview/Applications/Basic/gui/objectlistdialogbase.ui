@@ -1,0 +1,179 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>ObjectListDialogBase</class>
+<widget class="QWidget">
+    <property name="name">
+        <cstring>ObjectListDialogBase</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>281</width>
+            <height>390</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>ObjectListDialogBase</string>
+    </property>
+    <widget class="QTabWidget">
+        <property name="name">
+            <cstring>objectListTabWidget</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>3</x>
+                <y>9</y>
+                <width>275</width>
+                <height>374</height>
+            </rect>
+        </property>
+        <widget class="QWidget">
+            <property name="name">
+                <cstring>dataTab</cstring>
+            </property>
+            <attribute name="title">
+                <string>Data</string>
+            </attribute>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>deleteObjectPushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>9</x>
+                        <y>315</y>
+                        <width>255</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Remove Object</string>
+                </property>
+            </widget>
+            <widget class="QListView">
+                <column>
+                    <property name="text">
+                        <string>Column 1</string>
+                    </property>
+                    <property name="clickable">
+                        <bool>true</bool>
+                    </property>
+                    <property name="resizable">
+                        <bool>true</bool>
+                    </property>
+                </column>
+            <item>
+                <property name="text">
+                    <string>New Item</string>
+                </property>
+                <property name="pixmap">
+                    <pixmap></pixmap>
+                </property>
+            </item>
+                <property name="name">
+                    <cstring>dataListView</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>9</x>
+                        <y>14</y>
+                        <width>255</width>
+                        <height>295</height>
+                    </rect>
+                </property>
+            </widget>
+        </widget>
+        <widget class="QWidget">
+            <property name="name">
+                <cstring>toolTab</cstring>
+            </property>
+            <attribute name="title">
+                <string>Tools</string>
+            </attribute>
+            <widget class="QListView">
+                <column>
+                    <property name="text">
+                        <string>Column 1</string>
+                    </property>
+                    <property name="clickable">
+                        <bool>true</bool>
+                    </property>
+                    <property name="resizable">
+                        <bool>true</bool>
+                    </property>
+                </column>
+            <item>
+                <property name="text">
+                    <string>New Item</string>
+                </property>
+                <property name="pixmap">
+                    <pixmap></pixmap>
+                </property>
+            </item>
+                <property name="name">
+                    <cstring>toolListView</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>8</x>
+                        <y>12</y>
+                        <width>255</width>
+                        <height>324</height>
+                    </rect>
+                </property>
+                <property name="allColumnsShowFocus">
+                    <bool>true</bool>
+                </property>
+                <property name="resizeMode">
+                    <enum>LastColumn</enum>
+                </property>
+            </widget>
+        </widget>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>toolListView</sender>
+        <signal>selectionChanged(QListViewItem*)</signal>
+        <receiver>ObjectListDialogBase</receiver>
+        <slot>ListViewSelectionChanged(QListViewItem*)</slot>
+    </connection>
+    <connection>
+        <sender>toolListView</sender>
+        <signal>clicked(QListViewItem*)</signal>
+        <receiver>ObjectListDialogBase</receiver>
+        <slot>ListViewClicked(QListViewItem*)</slot>
+    </connection>
+    <connection>
+        <sender>dataListView</sender>
+        <signal>selectionChanged(QListViewItem*)</signal>
+        <receiver>ObjectListDialogBase</receiver>
+        <slot>ListViewSelectionChanged(QListViewItem*)</slot>
+    </connection>
+    <connection>
+        <sender>dataListView</sender>
+        <signal>clicked(QListViewItem*)</signal>
+        <receiver>ObjectListDialogBase</receiver>
+        <slot>ListViewClicked(QListViewItem*)</slot>
+    </connection>
+    <connection>
+        <sender>deleteObjectPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ObjectListDialogBase</receiver>
+        <slot>DeleteObjectPushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>objectListTabWidget</sender>
+        <signal>currentChanged(QWidget*)</signal>
+        <receiver>ObjectListDialogBase</receiver>
+        <slot>ObjectListTabWidgetCurrentChanged(QWidget*)</slot>
+    </connection>
+</connections>
+<slots>
+    <slot>ListViewSelectionChanged(QListViewItem *)</slot>
+    <slot>ListViewClicked( QListViewItem *)</slot>
+    <slot>DeleteObjectPushButtonClicked()</slot>
+    <slot>ObjectListTabWidgetCurrentChanged(QWidget*)</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

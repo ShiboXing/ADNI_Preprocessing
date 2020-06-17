@@ -1,0 +1,794 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>MultipleFileViewerDialogBase</class>
+<widget class="QWidget">
+    <property name="name">
+        <cstring>MultipleFileViewerDialogBase</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>1306</width>
+            <height>120</height>
+        </rect>
+    </property>
+    <property name="minimumSize">
+        <size>
+            <width>1306</width>
+            <height>120</height>
+        </size>
+    </property>
+    <property name="caption">
+        <string>Viewer</string>
+    </property>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>deletePushButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>126</x>
+                <y>50</y>
+                <width>143</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="minimumSize">
+            <size>
+                <width>110</width>
+                <height>0</height>
+            </size>
+        </property>
+        <property name="text">
+            <string>Delete Current</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>previousPushButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>313</x>
+                <y>50</y>
+                <width>36</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="maximumSize">
+            <size>
+                <width>36</width>
+                <height>30</height>
+            </size>
+        </property>
+        <property name="text">
+            <string>&lt;</string>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>startXTextLabel</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>105</x>
+                <y>87</y>
+                <width>50</width>
+                <height>22</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Start X</string>
+        </property>
+    </widget>
+    <widget class="QSlider">
+        <property name="name">
+            <cstring>framesSlider</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>353</x>
+                <y>55</y>
+                <width>213</width>
+                <height>19</height>
+            </rect>
+        </property>
+        <property name="maxValue">
+            <number>899</number>
+        </property>
+        <property name="orientation">
+            <enum>Horizontal</enum>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>firstPushButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>273</x>
+                <y>50</y>
+                <width>36</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="maximumSize">
+            <size>
+                <width>36</width>
+                <height>39</height>
+            </size>
+        </property>
+        <property name="text">
+            <string>&lt;&lt;</string>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>currentFIleTextLabel</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>527</x>
+                <y>87</y>
+                <width>79</width>
+                <height>22</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Current File:</string>
+        </property>
+    </widget>
+    <widget class="QLineEdit">
+        <property name="name">
+            <cstring>startZLineEdit</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>443</x>
+                <y>87</y>
+                <width>80</width>
+                <height>22</height>
+            </rect>
+        </property>
+        <property name="readOnly">
+            <bool>true</bool>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>startYTextLabel</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>251</x>
+                <y>87</y>
+                <width>45</width>
+                <height>22</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Start Y</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>loadFilesPushButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>14</x>
+                <y>50</y>
+                <width>108</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Load Files</string>
+        </property>
+    </widget>
+    <widget class="QLineEdit">
+        <property name="name">
+            <cstring>startXLineEdit</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>162</x>
+                <y>87</y>
+                <width>80</width>
+                <height>22</height>
+            </rect>
+        </property>
+        <property name="readOnly">
+            <bool>true</bool>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>startZTextLabel</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>388</x>
+                <y>87</y>
+                <width>48</width>
+                <height>22</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Start Z</string>
+        </property>
+    </widget>
+    <widget class="QLineEdit">
+        <property name="name">
+            <cstring>startYLineEdit</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>303</x>
+                <y>87</y>
+                <width>80</width>
+                <height>22</height>
+            </rect>
+        </property>
+        <property name="readOnly">
+            <bool>true</bool>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>nextPushButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>570</x>
+                <y>50</y>
+                <width>36</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="maximumSize">
+            <size>
+                <width>36</width>
+                <height>30</height>
+            </size>
+        </property>
+        <property name="text">
+            <string>&gt;</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>lastPushButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>610</x>
+                <y>50</y>
+                <width>36</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="maximumSize">
+            <size>
+                <width>36</width>
+                <height>30</height>
+            </size>
+        </property>
+        <property name="text">
+            <string>&gt;&gt;</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>infoPushButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>14</x>
+                <y>83</y>
+                <width>84</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>MINC Info</string>
+        </property>
+    </widget>
+    <widget class="QButtonGroup">
+        <property name="name">
+            <cstring>leftWindowLevelbuttonGroup</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>14</x>
+                <y>10</y>
+                <width>634</width>
+                <height>35</height>
+            </rect>
+        </property>
+        <property name="minimumSize">
+            <size>
+                <width>0</width>
+                <height>30</height>
+            </size>
+        </property>
+        <property name="maximumSize">
+            <size>
+                <width>32767</width>
+                <height>35</height>
+            </size>
+        </property>
+        <property name="title">
+            <string></string>
+        </property>
+        <widget class="QSlider">
+            <property name="name">
+                <cstring>leftWindowSlider</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>91</x>
+                    <y>4</y>
+                    <width>120</width>
+                    <height>26</height>
+                </rect>
+            </property>
+            <property name="orientation">
+                <enum>Horizontal</enum>
+            </property>
+        </widget>
+        <widget class="QLabel">
+            <property name="name">
+                <cstring>leftWindowTextLabel</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>11</x>
+                    <y>4</y>
+                    <width>73</width>
+                    <height>25</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Window:</string>
+            </property>
+        </widget>
+        <widget class="QLabel">
+            <property name="name">
+                <cstring>leftLevelTextLabel</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>240</x>
+                    <y>4</y>
+                    <width>73</width>
+                    <height>26</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Level:</string>
+            </property>
+        </widget>
+        <widget class="QSlider">
+            <property name="name">
+                <cstring>leftLevelSlider</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>323</x>
+                    <y>4</y>
+                    <width>120</width>
+                    <height>26</height>
+                </rect>
+            </property>
+            <property name="orientation">
+                <enum>Horizontal</enum>
+            </property>
+        </widget>
+        <widget class="QComboBox">
+            <property name="name">
+                <cstring>leftColorComboBox</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>472</x>
+                    <y>4</y>
+                    <width>151</width>
+                    <height>26</height>
+                </rect>
+            </property>
+        </widget>
+    </widget>
+    <widget class="QComboBox">
+        <property name="name">
+            <cstring>timeComboBox</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>656</x>
+                <y>50</y>
+                <width>50</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="maximumSize">
+            <size>
+                <width>50</width>
+                <height>30</height>
+            </size>
+        </property>
+        <property name="maxCount">
+            <number>30</number>
+        </property>
+    </widget>
+    <widget class="QButtonGroup">
+        <property name="name">
+            <cstring>rightWindowLevelbuttonGroup</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>655</x>
+                <y>11</y>
+                <width>637</width>
+                <height>35</height>
+            </rect>
+        </property>
+        <property name="minimumSize">
+            <size>
+                <width>0</width>
+                <height>30</height>
+            </size>
+        </property>
+        <property name="maximumSize">
+            <size>
+                <width>32767</width>
+                <height>35</height>
+            </size>
+        </property>
+        <property name="title">
+            <string></string>
+        </property>
+        <widget class="QLabel">
+            <property name="name">
+                <cstring>rightWindowTextLabel</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>11</x>
+                    <y>4</y>
+                    <width>73</width>
+                    <height>26</height>
+                </rect>
+            </property>
+            <property name="maximumSize">
+                <size>
+                    <width>32767</width>
+                    <height>32767</height>
+                </size>
+            </property>
+            <property name="text">
+                <string>Window:</string>
+            </property>
+        </widget>
+        <widget class="QSlider">
+            <property name="name">
+                <cstring>rightWindowSlider</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>93</x>
+                    <y>4</y>
+                    <width>120</width>
+                    <height>26</height>
+                </rect>
+            </property>
+            <property name="orientation">
+                <enum>Horizontal</enum>
+            </property>
+        </widget>
+        <widget class="QLabel">
+            <property name="name">
+                <cstring>rightLevelTextLabel</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>240</x>
+                    <y>4</y>
+                    <width>73</width>
+                    <height>26</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Level:</string>
+            </property>
+        </widget>
+        <widget class="QSlider">
+            <property name="name">
+                <cstring>rightLevelSlider</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>323</x>
+                    <y>4</y>
+                    <width>119</width>
+                    <height>26</height>
+                </rect>
+            </property>
+            <property name="orientation">
+                <enum>Horizontal</enum>
+            </property>
+        </widget>
+        <widget class="QComboBox">
+            <property name="name">
+                <cstring>rightColorComboBox</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>478</x>
+                    <y>4</y>
+                    <width>151</width>
+                    <height>26</height>
+                </rect>
+            </property>
+        </widget>
+    </widget>
+    <widget class="QLineEdit">
+        <property name="name">
+            <cstring>filenameLineEdit</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>610</x>
+                <y>87</y>
+                <width>677</width>
+                <height>23</height>
+            </rect>
+        </property>
+        <property name="alignment">
+            <set>AlignAuto</set>
+        </property>
+        <property name="readOnly">
+            <bool>true</bool>
+        </property>
+    </widget>
+    <spacer>
+        <property name="name">
+            <cstring>spacer1</cstring>
+        </property>
+        <property name="orientation">
+            <enum>Horizontal</enum>
+        </property>
+        <property name="sizeType">
+            <enum>Expanding</enum>
+        </property>
+        <property name="sizeHint">
+            <size>
+                <width>113</width>
+                <height>16</height>
+            </size>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>784</x>
+                <y>57</y>
+                <width>113</width>
+                <height>16</height>
+            </rect>
+        </property>
+    </spacer>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>startPushButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>709</x>
+                <y>50</y>
+                <width>72</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Start</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>loadVolumePushButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>902</x>
+                <y>51</y>
+                <width>106</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Load Data</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>setMaskPushButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>1159</x>
+                <y>51</y>
+                <width>127</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="minimumSize">
+            <size>
+                <width>110</width>
+                <height>0</height>
+            </size>
+        </property>
+        <property name="text">
+            <string>Set Mask</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>setTransformPushButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>1020</x>
+                <y>51</y>
+                <width>127</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="minimumSize">
+            <size>
+                <width>110</width>
+                <height>0</height>
+            </size>
+        </property>
+        <property name="text">
+            <string>Set Transform</string>
+        </property>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>loadFilesPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>MultipleFileViewerDialogBase</receiver>
+        <slot>LoadFilesButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>loadVolumePushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>MultipleFileViewerDialogBase</receiver>
+        <slot>LoadVolumeButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>setTransformPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>MultipleFileViewerDialogBase</receiver>
+        <slot>SetTransformButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>deletePushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>MultipleFileViewerDialogBase</receiver>
+        <slot>DeleteCurrentButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>firstPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>MultipleFileViewerDialogBase</receiver>
+        <slot>FirstButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>previousPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>MultipleFileViewerDialogBase</receiver>
+        <slot>PreviousButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>framesSlider</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>MultipleFileViewerDialogBase</receiver>
+        <slot>FrameSliderValueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>nextPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>MultipleFileViewerDialogBase</receiver>
+        <slot>NextButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>lastPushButton</sender>
+        <signal>pressed()</signal>
+        <receiver>MultipleFileViewerDialogBase</receiver>
+        <slot>LastButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>timeComboBox</sender>
+        <signal>activated(int)</signal>
+        <receiver>MultipleFileViewerDialogBase</receiver>
+        <slot>TimeComboBoxActivated(int)</slot>
+    </connection>
+    <connection>
+        <sender>startPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>MultipleFileViewerDialogBase</receiver>
+        <slot>StartButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>leftWindowSlider</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>MultipleFileViewerDialogBase</receiver>
+        <slot>LeftWindowSliderValueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>leftLevelSlider</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>MultipleFileViewerDialogBase</receiver>
+        <slot>LeftLevelSliderValueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>leftColorComboBox</sender>
+        <signal>activated(int)</signal>
+        <receiver>MultipleFileViewerDialogBase</receiver>
+        <slot>LeftColorComboBoxActivated(int)</slot>
+    </connection>
+    <connection>
+        <sender>rightWindowSlider</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>MultipleFileViewerDialogBase</receiver>
+        <slot>RightWindowSliderValueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>rightLevelSlider</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>MultipleFileViewerDialogBase</receiver>
+        <slot>RightLevelSliderValueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>rightColorComboBox</sender>
+        <signal>activated(int)</signal>
+        <receiver>MultipleFileViewerDialogBase</receiver>
+        <slot>RightColorComboBoxActivated(int)</slot>
+    </connection>
+    <connection>
+        <sender>infoPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>MultipleFileViewerDialogBase</receiver>
+        <slot>ShowMincInfo()</slot>
+    </connection>
+    <connection>
+        <sender>setMaskPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>MultipleFileViewerDialogBase</receiver>
+        <slot>SetMaskButtonClicked()</slot>
+    </connection>
+</connections>
+<slots>
+    <slot>LoadFilesButtonClicked()</slot>
+    <slot>LoadVolumeButtonClicked()</slot>
+    <slot>DeleteCurrentButtonClicked()</slot>
+    <slot>FirstButtonClicked()</slot>
+    <slot>PreviousButtonClicked()</slot>
+    <slot>FrameSliderValueChanged(int)</slot>
+    <slot>TimeComboBoxActivated(int)</slot>
+    <slot>StartButtonClicked()</slot>
+    <slot>SetTransformButtonClicked()</slot>
+    <slot>NextButtonClicked()</slot>
+    <slot>LastButtonClicked()</slot>
+    <slot>LeftWindowSliderValueChanged(int)</slot>
+    <slot>LeftLevelSliderValueChanged(int)</slot>
+    <slot>LeftColorComboBoxActivated(int)</slot>
+    <slot>RightWindowSliderValueChanged(int)</slot>
+    <slot>RightLevelSliderValueChanged(int)</slot>
+    <slot>RightColorComboBoxActivated(int)</slot>
+    <slot>ShowMincInfo()</slot>
+    <slot>SetMaskButtonClicked()</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

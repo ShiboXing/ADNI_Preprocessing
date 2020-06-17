@@ -1,0 +1,136 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>ClearSelectedPointDialogBase</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>ClearSelectedPointDialogBase</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>260</width>
+            <height>93</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Clear Selected Point</string>
+    </property>
+    <spacer>
+        <property name="name">
+            <cstring>spacer</cstring>
+        </property>
+        <property name="orientation">
+            <enum>Horizontal</enum>
+        </property>
+        <property name="sizeType">
+            <enum>Expanding</enum>
+        </property>
+        <property name="sizeHint">
+            <size>
+                <width>30</width>
+                <height>20</height>
+            </size>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>160</x>
+                <y>10</y>
+                <width>30</width>
+                <height>20</height>
+            </rect>
+        </property>
+    </spacer>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>pointNumberLabel</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>10</x>
+                <y>10</y>
+                <width>150</width>
+                <height>20</height>
+            </rect>
+        </property>
+        <property name="maximumSize">
+            <size>
+                <width>150</width>
+                <height>20</height>
+            </size>
+        </property>
+        <property name="text">
+            <string>Enter point number:</string>
+        </property>
+    </widget>
+    <widget class="QLineEdit">
+        <property name="name">
+            <cstring>pointNumberEdit</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>200</x>
+                <y>10</y>
+                <width>50</width>
+                <height>20</height>
+            </rect>
+        </property>
+        <property name="maximumSize">
+            <size>
+                <width>50</width>
+                <height>20</height>
+            </size>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>cancelButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>140</x>
+                <y>50</y>
+                <width>111</width>
+                <height>31</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Cancel</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>okButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>10</x>
+                <y>50</y>
+                <width>111</width>
+                <height>31</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>OK</string>
+        </property>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>okButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ClearSelectedPointDialogBase</receiver>
+        <slot>OKButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>cancelButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ClearSelectedPointDialogBase</receiver>
+        <slot>CancelButtonClicked()</slot>
+    </connection>
+</connections>
+<slots>
+    <slot>OKButtonClicked()</slot>
+    <slot>CancelButtonClicked()</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

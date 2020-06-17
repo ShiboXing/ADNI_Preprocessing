@@ -1,0 +1,930 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>PolyDataObjectSettingsDialogBase</class>
+<widget class="QWidget">
+    <property name="name">
+        <cstring>PolyDataObjectSettingsDialogBase</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>286</width>
+            <height>326</height>
+        </rect>
+    </property>
+    <property name="minimumSize">
+        <size>
+            <width>275</width>
+            <height>287</height>
+        </size>
+    </property>
+    <property name="caption">
+        <string>PolyDataObjectSettingsDialogBase</string>
+    </property>
+    <widget class="QTabWidget">
+        <property name="name">
+            <cstring>settingsTabWidget</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>5</x>
+                <y>12</y>
+                <width>275</width>
+                <height>306</height>
+            </rect>
+        </property>
+        <widget class="QWidget">
+            <property name="name">
+                <cstring>propertyTab</cstring>
+            </property>
+            <attribute name="title">
+                <string>Properties</string>
+            </attribute>
+            <widget class="QLayoutWidget">
+                <property name="name">
+                    <cstring>layout13</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>12</x>
+                        <y>33</y>
+                        <width>245</width>
+                        <height>29</height>
+                    </rect>
+                </property>
+                <hbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <property name="margin">
+                        <number>2</number>
+                    </property>
+                    <property name="spacing">
+                        <number>2</number>
+                    </property>
+                    <widget class="QLabel">
+                        <property name="name">
+                            <cstring>colorSwatch</cstring>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>160</width>
+                                <height>24</height>
+                            </size>
+                        </property>
+                        <property name="frameShape">
+                            <enum>Box</enum>
+                        </property>
+                        <property name="text">
+                            <string></string>
+                        </property>
+                        <property name="alignment">
+                            <set>AlignCenter</set>
+                        </property>
+                    </widget>
+                    <spacer>
+                        <property name="name">
+                            <cstring>spacer1</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Horizontal</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>16</width>
+                                <height>16</height>
+                            </size>
+                        </property>
+                    </spacer>
+                    <widget class="QPushButton">
+                        <property name="name">
+                            <cstring>changeColorButton</cstring>
+                        </property>
+                        <property name="text">
+                            <string>Set ...</string>
+                        </property>
+                    </widget>
+                </hbox>
+            </widget>
+            <widget class="QCheckBox">
+                <property name="name">
+                    <cstring>scalarVisibilityCheckBox</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>11</x>
+                        <y>5</y>
+                        <width>245</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Use scalars for color</string>
+                </property>
+                <property name="checked">
+                    <bool>true</bool>
+                </property>
+            </widget>
+            <widget class="QGroupBox">
+                <property name="name">
+                    <cstring>opacityGroupBox</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>11</x>
+                        <y>193</y>
+                        <width>246</width>
+                        <height>58</height>
+                    </rect>
+                </property>
+                <property name="title">
+                    <string>Object Opacity</string>
+                </property>
+                <widget class="QLayoutWidget">
+                    <property name="name">
+                        <cstring>layout16</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>8</x>
+                            <y>16</y>
+                            <width>229</width>
+                            <height>37</height>
+                        </rect>
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <property name="margin">
+                            <number>4</number>
+                        </property>
+                        <property name="spacing">
+                            <number>7</number>
+                        </property>
+                        <widget class="QSlider">
+                            <property name="name">
+                                <cstring>opacitySlider</cstring>
+                            </property>
+                            <property name="maxValue">
+                                <number>100</number>
+                            </property>
+                            <property name="pageStep">
+                                <number>10</number>
+                            </property>
+                            <property name="value">
+                                <number>100</number>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                        </widget>
+                        <widget class="QLineEdit">
+                            <property name="name">
+                                <cstring>opacityEdit</cstring>
+                            </property>
+                            <property name="maximumSize">
+                                <size>
+                                    <width>45</width>
+                                    <height>32767</height>
+                                </size>
+                            </property>
+                            <property name="alignment">
+                                <set>AlignLeft</set>
+                            </property>
+                        </widget>
+                    </hbox>
+                </widget>
+            </widget>
+            <widget class="QButtonGroup">
+                <property name="name">
+                    <cstring>displayModeGroupBox</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>11</x>
+                        <y>73</y>
+                        <width>245</width>
+                        <height>106</height>
+                    </rect>
+                </property>
+                <property name="margin">
+                    <number>11</number>
+                </property>
+                <property name="title">
+                    <string>Display Mode</string>
+                </property>
+                <property name="selectedId" stdset="0">
+                    <number>-1</number>
+                </property>
+                <widget class="QRadioButton">
+                    <property name="name">
+                        <cstring>wireframeRadioButton</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>16</x>
+                            <y>49</y>
+                            <width>204</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Wireframe</string>
+                    </property>
+                    <property name="buttonGroupId">
+                        <number>1</number>
+                    </property>
+                </widget>
+                <widget class="QRadioButton">
+                    <property name="name">
+                        <cstring>surfaceRadioButton</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>16</x>
+                            <y>72</y>
+                            <width>204</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Surface</string>
+                    </property>
+                    <property name="buttonGroupId">
+                        <number>2</number>
+                    </property>
+                </widget>
+                <widget class="QRadioButton">
+                    <property name="name">
+                        <cstring>pointRadioButton</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>16</x>
+                            <y>26</y>
+                            <width>204</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Points</string>
+                    </property>
+                    <property name="buttonGroupId">
+                        <number>0</number>
+                    </property>
+                </widget>
+            </widget>
+        </widget>
+        <widget class="QWidget">
+            <property name="name">
+                <cstring>tracksTab</cstring>
+            </property>
+            <attribute name="title">
+                <string>Tracks</string>
+            </attribute>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>resolutionTextLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>17</x>
+                        <y>25</y>
+                        <width>135</width>
+                        <height>25</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Resolution:</string>
+                </property>
+            </widget>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>radiusTextLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>17</x>
+                        <y>70</y>
+                        <width>135</width>
+                        <height>25</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Radius:</string>
+                </property>
+            </widget>
+            <widget class="QSpinBox">
+                <property name="name">
+                    <cstring>resolutionSpinBox</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>170</x>
+                        <y>23</y>
+                        <width>68</width>
+                        <height>25</height>
+                    </rect>
+                </property>
+                <property name="maxValue">
+                    <number>15</number>
+                </property>
+                <property name="minValue">
+                    <number>3</number>
+                </property>
+            </widget>
+            <widget class="QLineEdit">
+                <property name="name">
+                    <cstring>radiusLineEdit</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>170</x>
+                        <y>70</y>
+                        <width>68</width>
+                        <height>25</height>
+                    </rect>
+                </property>
+            </widget>
+        </widget>
+        <widget class="QWidget">
+            <property name="name">
+                <cstring>transformTab</cstring>
+            </property>
+            <attribute name="title">
+                <string>Transform</string>
+            </attribute>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>currentTypeTextLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>105</x>
+                        <y>63</y>
+                        <width>145</width>
+                        <height>20</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string></string>
+                </property>
+            </widget>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>availableTextLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>20</x>
+                        <y>9</y>
+                        <width>78</width>
+                        <height>20</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Available:</string>
+                </property>
+            </widget>
+            <widget class="QComboBox">
+                <property name="name">
+                    <cstring>transformComboBox</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>20</x>
+                        <y>33</y>
+                        <width>230</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+            </widget>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>transformTypeTextLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>20</x>
+                        <y>63</y>
+                        <width>78</width>
+                        <height>20</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Type:</string>
+                </property>
+            </widget>
+            <widget class="QListBox">
+                <item>
+                    <property name="text">
+                        <string>New Item</string>
+                    </property>
+                </item>
+                <property name="name">
+                    <cstring>appliedTransformsListBox</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>20</x>
+                        <y>174</y>
+                        <width>230</width>
+                        <height>92</height>
+                    </rect>
+                </property>
+            </widget>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>appliedTransformsTextLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>20</x>
+                        <y>146</y>
+                        <width>230</width>
+                        <height>20</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Applied Transformations:</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>transformMatrixPushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>20</x>
+                        <y>90</y>
+                        <width>230</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Show Transformation Matrix</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>undoLastTransformPushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>20</x>
+                        <y>120</y>
+                        <width>230</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Undo Last Transformation</string>
+                </property>
+            </widget>
+        </widget>
+        <widget class="QWidget">
+            <property name="name">
+                <cstring>fixedTransformTab</cstring>
+            </property>
+            <attribute name="title">
+                <string>Fixed Transform</string>
+            </attribute>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>xTextLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>21</x>
+                        <y>23</y>
+                        <width>35</width>
+                        <height>28</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>X:</string>
+                </property>
+                <property name="alignment">
+                    <set>AlignCenter</set>
+                </property>
+            </widget>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>zTextLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>197</x>
+                        <y>23</y>
+                        <width>35</width>
+                        <height>28</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Z:</string>
+                </property>
+                <property name="alignment">
+                    <set>AlignCenter</set>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>xplus1PushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>21</x>
+                        <y>71</y>
+                        <width>40</width>
+                        <height>23</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>+ 1</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>xminus1PushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>21</x>
+                        <y>111</y>
+                        <width>40</width>
+                        <height>23</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>- 1</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>xplus5PushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>21</x>
+                        <y>151</y>
+                        <width>40</width>
+                        <height>23</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>+ 5</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>xminus5PushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>21</x>
+                        <y>191</y>
+                        <width>40</width>
+                        <height>23</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>- 5</string>
+                </property>
+            </widget>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>yTextLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>111</x>
+                        <y>25</y>
+                        <width>35</width>
+                        <height>28</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Y:</string>
+                </property>
+                <property name="alignment">
+                    <set>AlignCenter</set>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>yplus1PushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>111</x>
+                        <y>71</y>
+                        <width>40</width>
+                        <height>23</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>+ 1</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>yminus1PushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>111</x>
+                        <y>111</y>
+                        <width>40</width>
+                        <height>23</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>- 1</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>yplus5PushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>111</x>
+                        <y>151</y>
+                        <width>40</width>
+                        <height>23</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>+ 5</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>yminus5PushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>111</x>
+                        <y>191</y>
+                        <width>40</width>
+                        <height>23</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>- 5</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>zplus1PushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>197</x>
+                        <y>71</y>
+                        <width>40</width>
+                        <height>23</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>+ 1</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>zminus1PushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>197</x>
+                        <y>111</y>
+                        <width>40</width>
+                        <height>23</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>- 1</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>zplus5PushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>197</x>
+                        <y>151</y>
+                        <width>40</width>
+                        <height>23</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>+ 5</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>zminus5PushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>197</x>
+                        <y>191</y>
+                        <width>40</width>
+                        <height>23</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>- 5</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>undoLastFixedTransformPushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>21</x>
+                        <y>231</y>
+                        <width>230</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Undo Last Transformation</string>
+                </property>
+            </widget>
+        </widget>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>scalarVisibilityCheckBox</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>PolyDataObjectSettingsDialogBase</receiver>
+        <slot>ScalarVisibilityCheckBoxToggled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>changeColorButton</sender>
+        <signal>clicked()</signal>
+        <receiver>PolyDataObjectSettingsDialogBase</receiver>
+        <slot>ColorSwatchClicked()</slot>
+    </connection>
+    <connection>
+        <sender>displayModeGroupBox</sender>
+        <signal>pressed(int)</signal>
+        <receiver>PolyDataObjectSettingsDialogBase</receiver>
+        <slot>DisplayModeButtonPressed(int)</slot>
+    </connection>
+    <connection>
+        <sender>opacitySlider</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>PolyDataObjectSettingsDialogBase</receiver>
+        <slot>OpacitySliderValueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>opacityEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>PolyDataObjectSettingsDialogBase</receiver>
+        <slot>OpacityEditTextChanged(const QString&amp;)</slot>
+    </connection>
+    <connection>
+        <sender>transformComboBox</sender>
+        <signal>activated(const QString&amp;)</signal>
+        <receiver>PolyDataObjectSettingsDialogBase</receiver>
+        <slot>TransformFromListSelected(const QString&amp;)</slot>
+    </connection>
+    <connection>
+        <sender>transformMatrixPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>PolyDataObjectSettingsDialogBase</receiver>
+        <slot>ShowTransformationMatrix()</slot>
+    </connection>
+    <connection>
+        <sender>settingsTabWidget</sender>
+        <signal>currentChanged(QWidget*)</signal>
+        <receiver>PolyDataObjectSettingsDialogBase</receiver>
+        <slot>SettingsTabWidgetCurrentChanged(QWidget*)</slot>
+    </connection>
+    <connection>
+        <sender>undoLastTransformPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>PolyDataObjectSettingsDialogBase</receiver>
+        <slot>UndoLastTransformation()</slot>
+    </connection>
+    <connection>
+        <sender>xminus1PushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>PolyDataObjectSettingsDialogBase</receiver>
+        <slot>XMinus1PushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>xminus5PushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>PolyDataObjectSettingsDialogBase</receiver>
+        <slot>XMinus5PushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>xplus1PushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>PolyDataObjectSettingsDialogBase</receiver>
+        <slot>XPlus1PushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>xplus5PushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>PolyDataObjectSettingsDialogBase</receiver>
+        <slot>XPlus5PushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>yminus1PushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>PolyDataObjectSettingsDialogBase</receiver>
+        <slot>YMinus1PushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>yminus5PushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>PolyDataObjectSettingsDialogBase</receiver>
+        <slot>YMinus5PushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>yplus1PushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>PolyDataObjectSettingsDialogBase</receiver>
+        <slot>YPlus1PushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>yplus5PushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>PolyDataObjectSettingsDialogBase</receiver>
+        <slot>YPlus5PushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>zminus1PushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>PolyDataObjectSettingsDialogBase</receiver>
+        <slot>ZMinus1PushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>zminus5PushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>PolyDataObjectSettingsDialogBase</receiver>
+        <slot>ZMinus5PushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>zplus1PushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>PolyDataObjectSettingsDialogBase</receiver>
+        <slot>ZPlus1PushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>zplus5PushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>PolyDataObjectSettingsDialogBase</receiver>
+        <slot>UndoLastTransformation()</slot>
+    </connection>
+    <connection>
+        <sender>resolutionSpinBox</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>PolyDataObjectSettingsDialogBase</receiver>
+        <slot>NewResolutionSelected(int)</slot>
+    </connection>
+    <connection>
+        <sender>radiusLineEdit</sender>
+        <signal>returnPressed()</signal>
+        <receiver>PolyDataObjectSettingsDialogBase</receiver>
+        <slot>RadiusLineEditChanged()</slot>
+    </connection>
+</connections>
+<slots>
+    <slot>ScalarVisibilityCheckBoxToggled(bool)</slot>
+    <slot>ColorSwatchClicked()</slot>
+    <slot>DisplayModeButtonPressed( int )</slot>
+    <slot>OpacitySliderValueChanged(int)</slot>
+    <slot>OpacityEditTextChanged( const QString &amp; )</slot>
+    <slot>TransformFromListSelected(const QString &amp;)</slot>
+    <slot>ShowTransformationMatrix()</slot>
+    <slot>SettingsTabWidgetCurrentChanged(QWidget*)</slot>
+    <slot>UndoLastTransformation()</slot>
+    <slot>XMinus1PushButtonClicked()</slot>
+    <slot>YMinus1PushButtonClicked()</slot>
+    <slot>ZMinus1PushButtonClicked()</slot>
+    <slot>XMinus5PushButtonClicked()</slot>
+    <slot>YMinus5PushButtonClicked()</slot>
+    <slot>ZMinus5PushButtonClicked()</slot>
+    <slot>XPlus1PushButtonClicked()</slot>
+    <slot>YPlus1PushButtonClicked()</slot>
+    <slot>ZPlus1PushButtonClicked()</slot>
+    <slot>XPlus5PushButtonClicked()</slot>
+    <slot>YPlus5PushButtonClicked()</slot>
+    <slot>ZPlus5PushButtonClicked()</slot>
+    <slot>RadiusLineEditChanged()</slot>
+    <slot>NewResolutionSelected(int)</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

@@ -1,0 +1,305 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>EditTransformDialogBase</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>EditTransformDialogBase</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>402</width>
+            <height>208</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Edit Transform</string>
+    </property>
+    <property name="sizeGripEnabled">
+        <bool>false</bool>
+    </property>
+    <widget class="QLayoutWidget">
+        <property name="name">
+            <cstring>layout2</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>3</x>
+                <y>4</y>
+                <width>396</width>
+                <height>200</height>
+            </rect>
+        </property>
+        <grid>
+            <property name="name">
+                <cstring>unnamed</cstring>
+            </property>
+            <property name="margin">
+                <number>4</number>
+            </property>
+            <property name="spacing">
+                <number>4</number>
+            </property>
+            <widget class="QComboBox" row="0" column="1" rowspan="1" colspan="3">
+                <property name="name">
+                    <cstring>transformListComboBox</cstring>
+                </property>
+                <property name="minimumSize">
+                    <size>
+                        <width>200</width>
+                        <height>24</height>
+                    </size>
+                </property>
+            </widget>
+            <widget class="QLabel" row="2" column="0">
+                <property name="name">
+                    <cstring>transformTypeTextLabel_2</cstring>
+                </property>
+                <property name="minimumSize">
+                    <size>
+                        <width>160</width>
+                        <height>24</height>
+                    </size>
+                </property>
+                <property name="text">
+                    <string>Transformation Type:</string>
+                </property>
+            </widget>
+            <widget class="QCheckBox" row="3" column="0">
+                <property name="name">
+                    <cstring>postMultiplyCheckBox</cstring>
+                </property>
+                <property name="text">
+                    <string>Post Multiply</string>
+                </property>
+            </widget>
+            <widget class="QPushButton" row="4" column="3">
+                <property name="name">
+                    <cstring>buttonCancel</cstring>
+                </property>
+                <property name="minimumSize">
+                    <size>
+                        <width>0</width>
+                        <height>24</height>
+                    </size>
+                </property>
+                <property name="focusPolicy">
+                    <enum>ClickFocus</enum>
+                </property>
+                <property name="text">
+                    <string>&amp;Cancel</string>
+                </property>
+                <property name="accel">
+                    <string></string>
+                </property>
+                <property name="autoDefault">
+                    <bool>false</bool>
+                </property>
+            </widget>
+            <widget class="QLabel" row="1" column="0">
+                <property name="name">
+                    <cstring>transformNameTextLabel</cstring>
+                </property>
+                <property name="minimumSize">
+                    <size>
+                        <width>160</width>
+                        <height>24</height>
+                    </size>
+                </property>
+                <property name="text">
+                    <string>Transformation Name:</string>
+                </property>
+            </widget>
+            <widget class="QPushButton" row="4" column="2">
+                <property name="name">
+                    <cstring>buttonOk</cstring>
+                </property>
+                <property name="minimumSize">
+                    <size>
+                        <width>0</width>
+                        <height>24</height>
+                    </size>
+                </property>
+                <property name="focusPolicy">
+                    <enum>ClickFocus</enum>
+                </property>
+                <property name="text">
+                    <string>&amp;OK</string>
+                </property>
+                <property name="accel">
+                    <string></string>
+                </property>
+                <property name="autoDefault">
+                    <bool>false</bool>
+                </property>
+                <property name="default">
+                    <bool>false</bool>
+                </property>
+            </widget>
+            <widget class="QComboBox" row="2" column="1" rowspan="1" colspan="3">
+                <property name="name">
+                    <cstring>transformTypeComboBox</cstring>
+                </property>
+                <property name="minimumSize">
+                    <size>
+                        <width>200</width>
+                        <height>24</height>
+                    </size>
+                </property>
+            </widget>
+            <widget class="QLineEdit" row="1" column="1" rowspan="1" colspan="3">
+                <property name="name">
+                    <cstring>transformNameLineEdit</cstring>
+                </property>
+                <property name="minimumSize">
+                    <size>
+                        <width>200</width>
+                        <height>24</height>
+                    </size>
+                </property>
+            </widget>
+            <widget class="QPushButton" row="4" column="0" rowspan="1" colspan="2">
+                <property name="name">
+                    <cstring>setTransformMatrixPushButton</cstring>
+                </property>
+                <property name="minimumSize">
+                    <size>
+                        <width>0</width>
+                        <height>24</height>
+                    </size>
+                </property>
+                <property name="text">
+                    <string>Set Transformation Matrix</string>
+                </property>
+                <property name="autoDefault">
+                    <bool>false</bool>
+                </property>
+            </widget>
+            <widget class="QPushButton" row="3" column="1" rowspan="1" colspan="3">
+                <property name="name">
+                    <cstring>deleteTransformPushButton</cstring>
+                </property>
+                <property name="minimumSize">
+                    <size>
+                        <width>0</width>
+                        <height>24</height>
+                    </size>
+                </property>
+                <property name="text">
+                    <string>Delete Transformation</string>
+                </property>
+                <property name="autoDefault">
+                    <bool>false</bool>
+                </property>
+            </widget>
+            <widget class="QButtonGroup" row="0" column="0">
+                <property name="name">
+                    <cstring>selectionButtonGroup</cstring>
+                </property>
+                <property name="maximumSize">
+                    <size>
+                        <width>32767</width>
+                        <height>32</height>
+                    </size>
+                </property>
+                <property name="title">
+                    <string></string>
+                </property>
+                <widget class="QRadioButton">
+                    <property name="name">
+                        <cstring>newRadioButton</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>12</x>
+                            <y>8</y>
+                            <width>62</width>
+                            <height>16</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>New</string>
+                    </property>
+                </widget>
+                <widget class="QRadioButton">
+                    <property name="name">
+                        <cstring>editRadioButton</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>87</x>
+                            <y>8</y>
+                            <width>62</width>
+                            <height>16</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Edit</string>
+                    </property>
+                </widget>
+            </widget>
+        </grid>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>buttonOk</sender>
+        <signal>clicked()</signal>
+        <receiver>EditTransformDialogBase</receiver>
+        <slot>OKButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>buttonCancel</sender>
+        <signal>clicked()</signal>
+        <receiver>EditTransformDialogBase</receiver>
+        <slot>reject()</slot>
+    </connection>
+    <connection>
+        <sender>selectionButtonGroup</sender>
+        <signal>clicked(int)</signal>
+        <receiver>EditTransformDialogBase</receiver>
+        <slot>SelectionButtonGroupClicked(int)</slot>
+    </connection>
+    <connection>
+        <sender>transformListComboBox</sender>
+        <signal>activated(const QString&amp;)</signal>
+        <receiver>EditTransformDialogBase</receiver>
+        <slot>TransformListComboBoxActivated(const QString&amp;)</slot>
+    </connection>
+    <connection>
+        <sender>transformNameLineEdit</sender>
+        <signal>returnPressed()</signal>
+        <receiver>EditTransformDialogBase</receiver>
+        <slot>TransformNameLineEditChanged()</slot>
+    </connection>
+    <connection>
+        <sender>transformTypeComboBox</sender>
+        <signal>activated(int)</signal>
+        <receiver>EditTransformDialogBase</receiver>
+        <slot>TransformTypeComboBoxActivated(int)</slot>
+    </connection>
+    <connection>
+        <sender>setTransformMatrixPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>EditTransformDialogBase</receiver>
+        <slot>SetTransformMatrixPushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>deleteTransformPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>EditTransformDialogBase</receiver>
+        <slot>DeleteTransformPushButtonClicked()</slot>
+    </connection>
+</connections>
+<slots>
+    <slot>OKButtonClicked()</slot>
+    <slot>SelectionButtonGroupClicked(int)</slot>
+    <slot>TransformListComboBoxActivated(const QString &amp;)</slot>
+    <slot>TransformNameLineEditChanged()</slot>
+    <slot>TransformTypeComboBoxActivated(int)</slot>
+    <slot>SetTransformMatrixPushButtonClicked()</slot>
+    <slot>PostMultiplyCheckBoxToggled(bool)</slot>
+    <slot>DeleteTransformPushButtonClicked()</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

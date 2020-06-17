@@ -1,0 +1,878 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>VolumizeDialogBase</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>VolumizeDialogBase</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>525</width>
+            <height>348</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Volume Reconstruction</string>
+    </property>
+    <property name="sizeGripEnabled">
+        <bool>true</bool>
+    </property>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>inputTextLabel</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>15</x>
+                <y>10</y>
+                <width>137</width>
+                <height>31</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Input files:</string>
+        </property>
+        <property name="alignment">
+            <set>AlignVCenter|AlignLeft</set>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>outputTextLabel</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>13</x>
+                <y>58</y>
+                <width>137</width>
+                <height>31</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Output file:</string>
+        </property>
+        <property name="alignment">
+            <set>AlignVCenter|AlignLeft</set>
+        </property>
+    </widget>
+    <widget class="QLayoutWidget">
+        <property name="name">
+            <cstring>Layout1</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>5</x>
+                <y>304</y>
+                <width>505</width>
+                <height>32</height>
+            </rect>
+        </property>
+        <hbox>
+            <property name="name">
+                <cstring>unnamed</cstring>
+            </property>
+            <property name="margin">
+                <number>0</number>
+            </property>
+            <property name="spacing">
+                <number>6</number>
+            </property>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>previewPushButton</cstring>
+                </property>
+                <property name="enabled">
+                    <bool>true</bool>
+                </property>
+                <property name="text">
+                    <string>&amp;Preview</string>
+                </property>
+                <property name="accel">
+                    <string>Alt+P</string>
+                </property>
+                <property name="autoDefault">
+                    <bool>true</bool>
+                </property>
+            </widget>
+            <spacer>
+                <property name="name">
+                    <cstring>Horizontal Spacing2</cstring>
+                </property>
+                <property name="orientation">
+                    <enum>Horizontal</enum>
+                </property>
+                <property name="sizeType">
+                    <enum>Expanding</enum>
+                </property>
+                <property name="sizeHint">
+                    <size>
+                        <width>20</width>
+                        <height>20</height>
+                    </size>
+                </property>
+            </spacer>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>buttonOk</cstring>
+                </property>
+                <property name="text">
+                    <string>&amp;OK</string>
+                </property>
+                <property name="accel">
+                    <string></string>
+                </property>
+                <property name="autoDefault">
+                    <bool>true</bool>
+                </property>
+                <property name="default">
+                    <bool>false</bool>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>buttonCancel</cstring>
+                </property>
+                <property name="text">
+                    <string>&amp;Cancel</string>
+                </property>
+                <property name="accel">
+                    <string></string>
+                </property>
+                <property name="autoDefault">
+                    <bool>true</bool>
+                </property>
+            </widget>
+        </hbox>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>inputFilesBrowseBushButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>475</x>
+                <y>10</y>
+                <width>40</width>
+                <height>31</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>...</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>outputBrowseBushButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>475</x>
+                <y>57</y>
+                <width>40</width>
+                <height>31</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>...</string>
+        </property>
+    </widget>
+    <widget class="QLineEdit">
+        <property name="name">
+            <cstring>outputLineEdit</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>169</x>
+                <y>57</y>
+                <width>292</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="maxLength">
+            <number>1024</number>
+        </property>
+        <property name="alignment">
+            <set>AlignLeft</set>
+        </property>
+    </widget>
+    <widget class="QLineEdit">
+        <property name="name">
+            <cstring>inputFilesLineEdit</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>170</x>
+                <y>9</y>
+                <width>292</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="alignment">
+            <set>AlignLeft</set>
+        </property>
+        <property name="readOnly">
+            <bool>true</bool>
+        </property>
+    </widget>
+    <widget class="QTabWidget">
+        <property name="name">
+            <cstring>volumizeTabWidget</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>10</x>
+                <y>104</y>
+                <width>505</width>
+                <height>193</height>
+            </rect>
+        </property>
+        <widget class="QWidget">
+            <property name="name">
+                <cstring>maskingWidget</cstring>
+            </property>
+            <attribute name="title">
+                <string>Masking</string>
+            </attribute>
+            <widget class="QButtonGroup">
+                <property name="name">
+                    <cstring>maskButtonGroup</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>6</x>
+                        <y>13</y>
+                        <width>150</width>
+                        <height>140</height>
+                    </rect>
+                </property>
+                <property name="title">
+                    <string></string>
+                </property>
+                <widget class="QRadioButton">
+                    <property name="name">
+                        <cstring>customMaskRadioButton</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>10</x>
+                            <y>60</y>
+                            <width>130</width>
+                            <height>28</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Custom Mask</string>
+                    </property>
+                    <property name="buttonGroupId">
+                        <number>1</number>
+                    </property>
+                </widget>
+                <widget class="QRadioButton">
+                    <property name="name">
+                        <cstring>defaultMaskRadioButton</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>13</x>
+                            <y>18</y>
+                            <width>130</width>
+                            <height>28</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Default Mask</string>
+                    </property>
+                    <property name="checked">
+                        <bool>true</bool>
+                    </property>
+                    <property name="buttonGroupId">
+                        <number>0</number>
+                    </property>
+                </widget>
+                <widget class="QRadioButton">
+                    <property name="name">
+                        <cstring>noMaskRadioButton</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>10</x>
+                            <y>100</y>
+                            <width>130</width>
+                            <height>28</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>No Mask</string>
+                    </property>
+                    <property name="checked">
+                        <bool>false</bool>
+                    </property>
+                    <property name="buttonGroupId">
+                        <number>2</number>
+                    </property>
+                </widget>
+            </widget>
+            <widget class="QLineEdit">
+                <property name="name">
+                    <cstring>customMaskLineEdit</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>180</x>
+                        <y>123</y>
+                        <width>260</width>
+                        <height>26</height>
+                    </rect>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>customBrowsePushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>451</x>
+                        <y>124</y>
+                        <width>41</width>
+                        <height>26</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>...</string>
+                </property>
+            </widget>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>customMaskTextLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>180</x>
+                        <y>90</y>
+                        <width>260</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>CustomMask Name:</string>
+                </property>
+            </widget>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>probeSettingsTextLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>180</x>
+                        <y>16</y>
+                        <width>260</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Current Probe Settings:</string>
+                </property>
+            </widget>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>currentSettingsTextLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>180</x>
+                        <y>49</y>
+                        <width>260</width>
+                        <height>23</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string></string>
+                </property>
+            </widget>
+        </widget>
+        <widget class="QWidget">
+            <property name="name">
+                <cstring>parameterWidget</cstring>
+            </property>
+            <attribute name="title">
+                <string>Parameters</string>
+            </attribute>
+            <widget class="QComboBox">
+                <property name="name">
+                    <cstring>interpolationComboBox</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>200</x>
+                        <y>125</y>
+                        <width>240</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+            </widget>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>sigmaTextLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>12</x>
+                        <y>87</y>
+                        <width>158</width>
+                        <height>25</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Sigma value:</string>
+                </property>
+            </widget>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>interpolationTextLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>12</x>
+                        <y>123</y>
+                        <width>154</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Interpolation type:</string>
+                </property>
+                <property name="alignment">
+                    <set>AlignVCenter|AlignLeft</set>
+                </property>
+            </widget>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>stepTextLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>12</x>
+                        <y>50</y>
+                        <width>154</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Step Size (voxel/mm):</string>
+                </property>
+                <property name="alignment">
+                    <set>AlignVCenter|AlignLeft</set>
+                </property>
+            </widget>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>radiusTextLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>12</x>
+                        <y>10</y>
+                        <width>154</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Regrid radius:</string>
+                </property>
+                <property name="alignment">
+                    <set>AlignVCenter|AlignLeft</set>
+                </property>
+            </widget>
+            <widget class="QLineEdit">
+                <property name="name">
+                    <cstring>radiusLineEdit</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>200</x>
+                        <y>10</y>
+                        <width>61</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="maxLength">
+                    <number>5</number>
+                </property>
+                <property name="alignment">
+                    <set>AlignLeft</set>
+                </property>
+            </widget>
+            <widget class="QLineEdit">
+                <property name="name">
+                    <cstring>stepLineEdit</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>200</x>
+                        <y>47</y>
+                        <width>61</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="maxLength">
+                    <number>5</number>
+                </property>
+                <property name="alignment">
+                    <set>AlignLeft</set>
+                </property>
+            </widget>
+            <widget class="QLineEdit">
+                <property name="name">
+                    <cstring>sigmaLineEdit</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>200</x>
+                        <y>89</y>
+                        <width>61</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="maxLength">
+                    <number>5</number>
+                </property>
+                <property name="alignment">
+                    <set>AlignLeft</set>
+                </property>
+            </widget>
+        </widget>
+        <widget class="QWidget">
+            <property name="name">
+                <cstring>filteringPage</cstring>
+            </property>
+            <attribute name="title">
+                <string>Filtering</string>
+            </attribute>
+            <spacer>
+                <property name="name">
+                    <cstring>spacer2</cstring>
+                </property>
+                <property name="orientation">
+                    <enum>Horizontal</enum>
+                </property>
+                <property name="sizeType">
+                    <enum>Expanding</enum>
+                </property>
+                <property name="sizeHint">
+                    <size>
+                        <width>185</width>
+                        <height>16</height>
+                    </size>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>239</x>
+                        <y>99</y>
+                        <width>185</width>
+                        <height>16</height>
+                    </rect>
+                </property>
+            </spacer>
+            <widget class="QLineEdit">
+                <property name="name">
+                    <cstring>saturationThresholdLineEdit</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>432</x>
+                        <y>91</y>
+                        <width>50</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="sizePolicy">
+                    <sizepolicy>
+                        <hsizetype>0</hsizetype>
+                        <vsizetype>0</vsizetype>
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                    </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                    <size>
+                        <width>50</width>
+                        <height>24</height>
+                    </size>
+                </property>
+                <property name="readOnly">
+                    <bool>false</bool>
+                </property>
+            </widget>
+            <widget class="QButtonGroup">
+                <property name="name">
+                    <cstring>reconstructButtonGroup</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>8</x>
+                        <y>15</y>
+                        <width>477</width>
+                        <height>69</height>
+                    </rect>
+                </property>
+                <property name="title">
+                    <string>Reconstruct</string>
+                </property>
+                <widget class="QRadioButton">
+                    <property name="name">
+                        <cstring>wholeVolumeRadioButton</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>21</x>
+                            <y>29</y>
+                            <width>170</width>
+                            <height>25</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Whole US Volume</string>
+                    </property>
+                    <property name="buttonGroupId">
+                        <number>0</number>
+                    </property>
+                </widget>
+                <widget class="QRadioButton">
+                    <property name="name">
+                        <cstring>vesselsOnlyRadioButton</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>239</x>
+                            <y>29</y>
+                            <width>171</width>
+                            <height>25</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Vessels Only</string>
+                    </property>
+                    <property name="buttonGroupId">
+                        <number>1</number>
+                    </property>
+                </widget>
+            </widget>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>saturationThresholdTextLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>12</x>
+                        <y>94</y>
+                        <width>215</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="minimumSize">
+                    <size>
+                        <width>206</width>
+                        <height>24</height>
+                    </size>
+                </property>
+                <property name="text">
+                    <string>Value Threshold (0 - 1):</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>increaseSaturationThresholdPushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>455</x>
+                        <y>127</y>
+                        <width>25</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="sizePolicy">
+                    <sizepolicy>
+                        <hsizetype>0</hsizetype>
+                        <vsizetype>0</vsizetype>
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                    </sizepolicy>
+                </property>
+                <property name="maximumSize">
+                    <size>
+                        <width>25</width>
+                        <height>25</height>
+                    </size>
+                </property>
+                <property name="text">
+                    <string>&gt;</string>
+                </property>
+            </widget>
+            <widget class="QSlider">
+                <property name="name">
+                    <cstring>saturationThresholdSlider</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>55</x>
+                        <y>127</y>
+                        <width>393</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="orientation">
+                    <enum>Horizontal</enum>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>decreaseSaturationThresholdPushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>16</x>
+                        <y>127</y>
+                        <width>25</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="sizePolicy">
+                    <sizepolicy>
+                        <hsizetype>0</hsizetype>
+                        <vsizetype>0</vsizetype>
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                    </sizepolicy>
+                </property>
+                <property name="maximumSize">
+                    <size>
+                        <width>25</width>
+                        <height>25</height>
+                    </size>
+                </property>
+                <property name="text">
+                    <string>&lt;</string>
+                </property>
+            </widget>
+        </widget>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>buttonCancel</sender>
+        <signal>clicked()</signal>
+        <receiver>VolumizeDialogBase</receiver>
+        <slot>reject()</slot>
+    </connection>
+    <connection>
+        <sender>buttonOk</sender>
+        <signal>clicked()</signal>
+        <receiver>VolumizeDialogBase</receiver>
+        <slot>OKButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>customBrowsePushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>VolumizeDialogBase</receiver>
+        <slot>CustomMaskBrowseButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>customMaskLineEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>VolumizeDialogBase</receiver>
+        <slot>CustomMaskLineEditChanged()</slot>
+    </connection>
+    <connection>
+        <sender>maskButtonGroup</sender>
+        <signal>clicked(int)</signal>
+        <receiver>VolumizeDialogBase</receiver>
+        <slot>MaskTypeChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>previewPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>VolumizeDialogBase</receiver>
+        <slot>PreviewButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>interpolationComboBox</sender>
+        <signal>activated(int)</signal>
+        <receiver>VolumizeDialogBase</receiver>
+        <slot>InterpolationTypeChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>outputLineEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>VolumizeDialogBase</receiver>
+        <slot>OutputFileLineEditChanged()</slot>
+    </connection>
+    <connection>
+        <sender>inputFilesBrowseBushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>VolumizeDialogBase</receiver>
+        <slot>InputFilesBrowseButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>outputBrowseBushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>VolumizeDialogBase</receiver>
+        <slot>OutputFileBrowseButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>reconstructButtonGroup</sender>
+        <signal>clicked(int)</signal>
+        <receiver>VolumizeDialogBase</receiver>
+        <slot>ReconstructionTypeChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>decreaseSaturationThresholdPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>VolumizeDialogBase</receiver>
+        <slot>DecreaseSaturationThresholdPushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>saturationThresholdSlider</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>VolumizeDialogBase</receiver>
+        <slot>SaturationThresholdSliderValueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>increaseSaturationThresholdPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>VolumizeDialogBase</receiver>
+        <slot>IncreaseSaturationThresholdPushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>saturationThresholdLineEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>VolumizeDialogBase</receiver>
+        <slot>SaturationThresholdLineEditChanged(const QString&amp;)</slot>
+    </connection>
+    <connection>
+        <sender>inputFilesLineEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>VolumizeDialogBase</receiver>
+        <slot>InputFilesLineEditChanged()</slot>
+    </connection>
+</connections>
+<slots>
+    <slot>OKButtonClicked()</slot>
+    <slot>CustomMaskBrowseButtonClicked()</slot>
+    <slot>PreviewButtonClicked()</slot>
+    <slot>InterpolationTypeChanged(int)</slot>
+    <slot>CustomMaskLineEditChanged()</slot>
+    <slot>MaskTypeChanged(int)</slot>
+    <slot>InputFilesLineEditChanged()</slot>
+    <slot>OutputFileLineEditChanged()</slot>
+    <slot>InputFilesBrowseButtonClicked()</slot>
+    <slot>OutputFileBrowseButtonClicked()</slot>
+    <slot>ReconstructionTypeChanged(int)</slot>
+    <slot>IncreaseSaturationThresholdPushButtonClicked()</slot>
+    <slot>DecreaseSaturationThresholdPushButtonClicked()</slot>
+    <slot>SaturationThresholdSliderValueChanged(int)</slot>
+    <slot>SaturationThresholdLineEditChanged(const QString &amp;)</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

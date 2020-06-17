@@ -1,0 +1,172 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>TransformListDialogBase</class>
+<widget class="QWidget">
+    <property name="name">
+        <cstring>TransformListDialogBase</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>279</width>
+            <height>315</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>TransformListDialogBase</string>
+    </property>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>transformTypeTextLabel</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>22</x>
+                <y>72</y>
+                <width>78</width>
+                <height>22</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Type:</string>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>currentTypeTextLabel</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>106</x>
+                <y>72</y>
+                <width>145</width>
+                <height>24</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string></string>
+        </property>
+    </widget>
+    <widget class="QComboBox">
+        <property name="name">
+            <cstring>transformComboBox</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>22</x>
+                <y>38</y>
+                <width>230</width>
+                <height>24</height>
+            </rect>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>availableTransformsTextLabel</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>22</x>
+                <y>7</y>
+                <width>230</width>
+                <height>24</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Available Transformations:</string>
+        </property>
+    </widget>
+    <widget class="QListBox">
+        <item>
+            <property name="text">
+                <string>New Item</string>
+            </property>
+        </item>
+        <property name="name">
+            <cstring>appliedTransformsListBox</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>22</x>
+                <y>193</y>
+                <width>230</width>
+                <height>111</height>
+            </rect>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>appliedTransformsTextLabel</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>22</x>
+                <y>161</y>
+                <width>230</width>
+                <height>24</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Applied Transformations:</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>transformMatrixPushButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>22</x>
+                <y>104</y>
+                <width>230</width>
+                <height>24</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Show Transformation Matrix</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>undoLastTransformPushButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>22</x>
+                <y>135</y>
+                <width>230</width>
+                <height>24</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Undo Last Transformation</string>
+        </property>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>transformComboBox</sender>
+        <signal>activated(const QString&amp;)</signal>
+        <receiver>TransformListDialogBase</receiver>
+        <slot>TransformFromListSelected(const QString&amp;)</slot>
+    </connection>
+    <connection>
+        <sender>transformMatrixPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>TransformListDialogBase</receiver>
+        <slot>ShowTransformationMatrix()</slot>
+    </connection>
+    <connection>
+        <sender>undoLastTransformPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>TransformListDialogBase</receiver>
+        <slot>UndoLastTransformation()</slot>
+    </connection>
+</connections>
+<slots>
+    <slot>TransformFromListSelected(const QString&amp;)</slot>
+    <slot>ShowTransformationMatrix()</slot>
+    <slot>UndoLastTransformation()</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

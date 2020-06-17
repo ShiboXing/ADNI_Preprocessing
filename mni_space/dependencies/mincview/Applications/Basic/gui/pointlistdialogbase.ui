@@ -1,0 +1,260 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>PointListDialogBase</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>PointListDialogBase</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>566</width>
+            <height>423</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Point List</string>
+    </property>
+    <property name="sizeGripEnabled">
+        <bool>false</bool>
+    </property>
+    <widget class="QLayoutWidget">
+        <property name="name">
+            <cstring>layout3</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>6</x>
+                <y>3</y>
+                <width>554</width>
+                <height>417</height>
+            </rect>
+        </property>
+        <grid>
+            <property name="name">
+                <cstring>unnamed</cstring>
+            </property>
+            <widget class="QButtonGroup" row="1" column="0">
+                <property name="name">
+                    <cstring>actionsButtonGroup</cstring>
+                </property>
+                <property name="maximumSize">
+                    <size>
+                        <width>32767</width>
+                        <height>44</height>
+                    </size>
+                </property>
+                <property name="title">
+                    <string></string>
+                </property>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>clearSelectedPushButton</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>5</x>
+                            <y>11</y>
+                            <width>116</width>
+                            <height>26</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Clear Selected</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>clearAllPushButton</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>156</x>
+                            <y>10</y>
+                            <width>81</width>
+                            <height>26</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Clear All</string>
+                    </property>
+                </widget>
+                <spacer>
+                    <property name="name">
+                        <cstring>spacer2</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>25</width>
+                            <height>16</height>
+                        </size>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>127</x>
+                            <y>20</y>
+                            <width>25</width>
+                            <height>16</height>
+                        </rect>
+                    </property>
+                </spacer>
+            </widget>
+            <widget class="QListView" row="2" column="0">
+                <column>
+                    <property name="text">
+                        <string>Column 1</string>
+                    </property>
+                    <property name="clickable">
+                        <bool>true</bool>
+                    </property>
+                    <property name="resizable">
+                        <bool>true</bool>
+                    </property>
+                </column>
+            <item>
+                <property name="text">
+                    <string>New Item</string>
+                </property>
+                <property name="pixmap">
+                    <pixmap></pixmap>
+                </property>
+            </item>
+                <property name="name">
+                    <cstring>pointListView</cstring>
+                </property>
+                <property name="margin">
+                    <number>0</number>
+                </property>
+                <property name="resizePolicy">
+                    <enum>Manual</enum>
+                </property>
+                <property name="showToolTips">
+                    <bool>false</bool>
+                </property>
+            </widget>
+            <widget class="QLineEdit" row="0" column="0">
+                <property name="name">
+                    <cstring>tagFileNameLineEdit</cstring>
+                </property>
+                <property name="readOnly">
+                    <bool>true</bool>
+                </property>
+            </widget>
+            <widget class="QLayoutWidget" row="3" column="0">
+                <property name="name">
+                    <cstring>Layout1</cstring>
+                </property>
+                <hbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <property name="margin">
+                        <number>2</number>
+                    </property>
+                    <property name="spacing">
+                        <number>6</number>
+                    </property>
+                    <widget class="QPushButton">
+                        <property name="name">
+                            <cstring>savePushButton</cstring>
+                        </property>
+                        <property name="text">
+                            <string>&amp;Save</string>
+                        </property>
+                        <property name="accel">
+                            <string>Alt+S</string>
+                        </property>
+                        <property name="autoDefault">
+                            <bool>true</bool>
+                        </property>
+                    </widget>
+                    <spacer>
+                        <property name="name">
+                            <cstring>Horizontal Spacing2</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Horizontal</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>20</height>
+                            </size>
+                        </property>
+                    </spacer>
+                    <widget class="QPushButton">
+                        <property name="name">
+                            <cstring>closePushButton</cstring>
+                        </property>
+                        <property name="text">
+                            <string>&amp;Close</string>
+                        </property>
+                        <property name="accel">
+                            <string>Alt+C</string>
+                        </property>
+                        <property name="autoDefault">
+                            <bool>true</bool>
+                        </property>
+                    </widget>
+                </hbox>
+            </widget>
+        </grid>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>closePushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>PointListDialogBase</receiver>
+        <slot>ClosePushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>savePushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>PointListDialogBase</receiver>
+        <slot>SavePushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>clearSelectedPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>PointListDialogBase</receiver>
+        <slot>ClearSelectedPushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>clearAllPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>PointListDialogBase</receiver>
+        <slot>ClearAllPushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>pointListView</sender>
+        <signal>clicked(QListViewItem*)</signal>
+        <receiver>PointListDialogBase</receiver>
+        <slot>PointFromListSelected(QListViewItem*)</slot>
+    </connection>
+    <connection>
+        <sender>pointListView</sender>
+        <signal>doubleClicked(QListViewItem*)</signal>
+        <receiver>PointListDialogBase</receiver>
+        <slot>EditPoint(QListViewItem*)</slot>
+    </connection>
+</connections>
+<slots>
+    <slot>ClosePushButtonClicked()</slot>
+    <slot>SavePushButtonClicked()</slot>
+    <slot>ClearSelectedPushButtonClicked()</slot>
+    <slot>ClearAllPushButtonClicked()</slot>
+    <slot>EditPoint(QListViewItem*)</slot>
+    <slot>PointFromListSelected(QListViewItem*)</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

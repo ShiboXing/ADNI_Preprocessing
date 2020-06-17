@@ -1,0 +1,88 @@
+MincView is a visualization tool. The source code forms part of a larger IGNS application called ibis.
+You may find the description of the application at 
+http://www.bic.mni.mcgill.ca/ServicesSoftwareVisualization/MincView
+
+1. Directory Content
+    Applications/Basic - GUI and basic functionality
+    Application/MincView - main application
+    CMakeCommon - FindMinc.cmake, install uninstall cmake
+    GlobalIgns - headers and general use functions
+    icons - application icons
+    vtk - classes derived from vtk
+    CMakeList.txt - main CMake list
+
+2. External Dependencies
+    Qt 3.3
+    vtk5.4.2+
+    CMake 2.6-patch 4+
+    MINC 1x or MINC 2.x, netcdf, hdf5 and z libraries
+
+3. Supported file formats
+    *.mnc, *obj, .*tag
+    MincView (1.6.4) is built with Minc 1.x or 2.x libraries but supports files only in MINC 1 format.
+ 
+
+4. Building - presuming you unpacked into directory /dir/mincview
+   a/ create directory Igns in your home directory and put there mincview.png from directory icons
+   b/ create build directory  /dir/build
+   c/ cd build
+   d/ cmake ../mincview or ccmake ../mincview
+   set necessary options:
+   
+       BUILD_SHARED_LIBS                OFF
+       CMAKE_BACKWARDS_COMPATIBILITY    2.6
+       CMAKE_BUILD_TYPE                 Debug
+       CMAKE_INSTALL_PREFIX             /opt/MincView
+       DESIRED_QT_VERSION               3
+       IGNS_BUILD_BASIC                 ON
+       IGNS_BUILD_MINC_VIEW             ON
+       IGNS_BUILD_QT_EXTENSIONS         ON
+       IGNS_BUILD_VTK_EXTENSIONS        ON
+       IGNS_BUILD_VTK_MINC              ON
+       IGNS_BUILD_VTK_QT                ON
+       MINC_INCLUDE_DIR                 /usr/local/mni/include
+       MINC_LIBRARIES                   /usr/local/mni/lib/libminc.a
+       NETCDF_INCLUDE_DIR               /usr/local/mni/include
+       NETCDF_LIBRARIES                 /usr/local/mni/lib/libnetcdf.a
+       VOLUME_IO_INCLUDE_DIR            /usr/local/mni/include
+       VOLUME_IO_LIBRARIES              /usr/local/mni/lib/libvolume_io.a
+       VTK_DIR                          /YOUR_VTK54_DIRECTORY/lib/vtk-5.4
+
+   please note, not all the options show at the beginning, the last one will be IGNS_BUILD_MINC_VIEW, 
+   so you have to press c few times.
+   
+   e/ make 
+   
+   Optional:
+   f/ make install (if you wish and have administrators rights).
+   g/ in order to run MincView from command line, if you use csh or tcsh in your .cshrc
+      setenv PATH ${PATH}:your_installation_path
+      setenv LD_LIBRARY_PATH "/YOUR_VTK5.4_DIRECTORY":${LD_LIBRARY_PATH}
+   
+5. CMake options for MINC 2.x
+
+ BUILD_SHARED_LIBS                OFF                                                    
+ CMAKE_BACKWARDS_COMPATIBILITY    2.6                                                    
+ CMAKE_BUILD_TYPE                 Release                                                       
+ CMAKE_INSTALL_PREFIX             /opt/MincView                                           
+ DESIRED_MINC_VERSION             2                                                      
+ DESIRED_QT_VERSION               3                                                      
+ HDF5_LIBRARY                     /usr/lib/libhdf5.so                                    
+ IGNS_BUILD_BASIC                 ON                                                     
+ IGNS_BUILD_MINC_VIEW             ON                                                     
+ IGNS_BUILD_QT_EXTENSIONS         ON                                                     
+ IGNS_BUILD_VTK_EXTENSIONS        ON                                                     
+ IGNS_BUILD_VTK_MINC              ON                                                     
+ IGNS_BUILD_VTK_QT                ON                                                     
+ MINC1_H_FILE                     MINC1_H_FILE-NOTFOUND                                  
+ MINC2_H_FILE                     /usr/local/bic/include/minc.h                          
+ MINC_INCLUDE_DIR                 /usr/local/bic/include                                 
+ MINC_LIBRARIES                   /usr/local/bic/lib/libminc2.a                          
+ NETCDF_INCLUDE_DIR               /usr/include                                           
+ NETCDF_LIBRARIES                 /usr/lib/libnetcdf.so                                  
+ VOLUME_IO_INCLUDE_DIR            /usr/local/bic/include                                 
+ VOLUME_IO_LIBRARIES              /usr/local/bic/lib/libvolume_io2.a                     
+ VTK_DIR                          /YOUR_VTK54_DIRECTORY/lib/vtk-5.4
+ Z_LIBRARY                        /usr/lib/libz.so                                       
+
+

@@ -1,0 +1,245 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>SavePointDialogBase</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>SavePointDialogBase</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>549</width>
+            <height>312</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Save Point</string>
+    </property>
+    <property name="sizeGripEnabled">
+        <bool>false</bool>
+    </property>
+    <widget class="QCheckBox">
+        <property name="name">
+            <cstring>addToTagCheckBox</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>11</x>
+                <y>76</y>
+                <width>271</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Add to Existing Tag File</string>
+        </property>
+    </widget>
+    <widget class="QLayoutWidget">
+        <property name="name">
+            <cstring>Layout1</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>9</x>
+                <y>268</y>
+                <width>533</width>
+                <height>33</height>
+            </rect>
+        </property>
+        <hbox>
+            <property name="name">
+                <cstring>unnamed</cstring>
+            </property>
+            <property name="margin">
+                <number>0</number>
+            </property>
+            <property name="spacing">
+                <number>6</number>
+            </property>
+            <spacer>
+                <property name="name">
+                    <cstring>Horizontal Spacing2</cstring>
+                </property>
+                <property name="orientation">
+                    <enum>Horizontal</enum>
+                </property>
+                <property name="sizeType">
+                    <enum>Expanding</enum>
+                </property>
+                <property name="sizeHint">
+                    <size>
+                        <width>20</width>
+                        <height>20</height>
+                    </size>
+                </property>
+            </spacer>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>buttonOk</cstring>
+                </property>
+                <property name="text">
+                    <string>&amp;OK</string>
+                </property>
+                <property name="autoDefault">
+                    <bool>false</bool>
+                </property>
+                <property name="default">
+                    <bool>false</bool>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>buttonCancel</cstring>
+                </property>
+                <property name="text">
+                    <string>&amp;Cancel</string>
+                </property>
+                <property name="accel">
+                    <string></string>
+                </property>
+                <property name="autoDefault">
+                    <bool>false</bool>
+                </property>
+            </widget>
+        </hbox>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>fileNameTextLabel</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>10</x>
+                <y>113</y>
+                <width>530</width>
+                <height>25</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>File Name:</string>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>pointNameTextLabel</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>10</x>
+                <y>5</y>
+                <width>530</width>
+                <height>25</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Point Name:</string>
+        </property>
+    </widget>
+    <widget class="QLineEdit">
+        <property name="name">
+            <cstring>pointNameLineEdit</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>10</x>
+                <y>40</y>
+                <width>530</width>
+                <height>30</height>
+            </rect>
+        </property>
+    </widget>
+    <widget class="QLineEdit">
+        <property name="name">
+            <cstring>fileNameLineEdit</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>10</x>
+                <y>151</y>
+                <width>466</width>
+                <height>30</height>
+            </rect>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>displayNameTextLabel</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>10</x>
+                <y>193</y>
+                <width>530</width>
+                <height>25</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Point Object Display Name:</string>
+        </property>
+    </widget>
+    <widget class="QLineEdit">
+        <property name="name">
+            <cstring>displayNameLineEdit</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>10</x>
+                <y>228</y>
+                <width>530</width>
+                <height>30</height>
+            </rect>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>browsePushButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>493</x>
+                <y>151</y>
+                <width>47</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>...</string>
+        </property>
+        <property name="autoDefault">
+            <bool>false</bool>
+        </property>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>buttonOk</sender>
+        <signal>clicked()</signal>
+        <receiver>SavePointDialogBase</receiver>
+        <slot>OkButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>buttonCancel</sender>
+        <signal>clicked()</signal>
+        <receiver>SavePointDialogBase</receiver>
+        <slot>reject()</slot>
+    </connection>
+    <connection>
+        <sender>browsePushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>SavePointDialogBase</receiver>
+        <slot>BrowsePushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>fileNameLineEdit</sender>
+        <signal>returnPressed()</signal>
+        <receiver>SavePointDialogBase</receiver>
+        <slot>FileNameEntered()</slot>
+    </connection>
+</connections>
+<slots>
+    <slot>OkButtonClicked()</slot>
+    <slot>BrowsePushButtonClicked()</slot>
+    <slot>FileNameEntered()</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

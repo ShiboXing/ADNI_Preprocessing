@@ -1,0 +1,1759 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>ImageObjectSettingsDialogBase</class>
+<widget class="QWidget">
+    <property name="name">
+        <cstring>ImageObjectSettingsDialogBase</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>289</width>
+            <height>305</height>
+        </rect>
+    </property>
+    <property name="minimumSize">
+        <size>
+            <width>275</width>
+            <height>287</height>
+        </size>
+    </property>
+    <property name="caption">
+        <string>Image Settings</string>
+    </property>
+    <widget class="QTabWidget">
+        <property name="name">
+            <cstring>imageSettingsWidget</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>9</x>
+                <y>7</y>
+                <width>275</width>
+                <height>294</height>
+            </rect>
+        </property>
+        <property name="sizePolicy">
+            <sizepolicy>
+                <hsizetype>5</hsizetype>
+                <vsizetype>5</vsizetype>
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+            </sizepolicy>
+        </property>
+        <widget class="QWidget">
+            <property name="name">
+                <cstring>viewTabPage</cstring>
+            </property>
+            <attribute name="title">
+                <string>View</string>
+            </attribute>
+            <widget class="QLayoutWidget">
+                <property name="name">
+                    <cstring>layout6</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>7</x>
+                        <y>6</y>
+                        <width>257</width>
+                        <height>250</height>
+                    </rect>
+                </property>
+                <grid>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <property name="margin">
+                        <number>4</number>
+                    </property>
+                    <property name="spacing">
+                        <number>4</number>
+                    </property>
+                    <widget class="QPushButton" row="0" column="0" rowspan="1" colspan="2">
+                        <property name="name">
+                            <cstring>resetPlanesPushButton</cstring>
+                        </property>
+                        <property name="text">
+                            <string>Reset Planes</string>
+                        </property>
+                    </widget>
+                    <widget class="QLayoutWidget" row="1" column="1">
+                        <property name="name">
+                            <cstring>standardViewsLayout</cstring>
+                        </property>
+                        <grid>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <property name="margin">
+                                <number>4</number>
+                            </property>
+                            <property name="spacing">
+                                <number>4</number>
+                            </property>
+                            <widget class="QPushButton" row="4" column="0">
+                                <property name="name">
+                                    <cstring>topPushButton</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Top</string>
+                                </property>
+                            </widget>
+                            <widget class="QPushButton" row="5" column="0">
+                                <property name="name">
+                                    <cstring>bottomPushButton</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Bottom</string>
+                                </property>
+                            </widget>
+                            <widget class="QPushButton" row="2" column="0">
+                                <property name="name">
+                                    <cstring>leftPushButton</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Left</string>
+                                </property>
+                            </widget>
+                            <widget class="QPushButton" row="3" column="0">
+                                <property name="name">
+                                    <cstring>rightPushButton</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Right</string>
+                                </property>
+                            </widget>
+                            <widget class="QPushButton" row="1" column="0">
+                                <property name="name">
+                                    <cstring>backPushButton</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Back</string>
+                                </property>
+                            </widget>
+                            <widget class="QPushButton" row="0" column="0">
+                                <property name="name">
+                                    <cstring>frontPushButton</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Front</string>
+                                </property>
+                            </widget>
+                        </grid>
+                    </widget>
+                    <widget class="QLayoutWidget" row="1" column="0">
+                        <property name="name">
+                            <cstring>planeViewLayout</cstring>
+                        </property>
+                        <grid>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <property name="margin">
+                                <number>4</number>
+                            </property>
+                            <property name="spacing">
+                                <number>4</number>
+                            </property>
+                            <widget class="QCheckBox" row="3" column="0">
+                                <property name="name">
+                                    <cstring>zPlaneCheckBox</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Z Plane</string>
+                                </property>
+                                <property name="checked">
+                                    <bool>true</bool>
+                                </property>
+                            </widget>
+                            <widget class="QCheckBox" row="1" column="0">
+                                <property name="name">
+                                    <cstring>xPlaneCheckBox</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>X Plane</string>
+                                </property>
+                                <property name="checked">
+                                    <bool>true</bool>
+                                </property>
+                            </widget>
+                            <widget class="QCheckBox" row="0" column="0">
+                                <property name="name">
+                                    <cstring>outlineCheckBox</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Outline</string>
+                                </property>
+                                <property name="checked">
+                                    <bool>true</bool>
+                                </property>
+                            </widget>
+                            <widget class="QCheckBox" row="2" column="0">
+                                <property name="name">
+                                    <cstring>yPlaneCheckBox</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Y Plane</string>
+                                </property>
+                                <property name="checked">
+                                    <bool>true</bool>
+                                </property>
+                            </widget>
+                            <widget class="QCheckBox" row="4" column="0">
+                                <property name="name">
+                                    <cstring>planes3DCheckBox</cstring>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>109</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>3D Planes</string>
+                                </property>
+                                <property name="checked">
+                                    <bool>true</bool>
+                                </property>
+                            </widget>
+                        </grid>
+                    </widget>
+                </grid>
+            </widget>
+        </widget>
+        <widget class="QWidget">
+            <property name="name">
+                <cstring>colorTabPage</cstring>
+            </property>
+            <attribute name="title">
+                <string>Color</string>
+            </attribute>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>selectColorTableTextLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>13</x>
+                        <y>9</y>
+                        <width>248</width>
+                        <height>21</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Select Color Table:</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>decreaseLevelPushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>77</x>
+                        <y>88</y>
+                        <width>25</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="sizePolicy">
+                    <sizepolicy>
+                        <hsizetype>0</hsizetype>
+                        <vsizetype>0</vsizetype>
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                    </sizepolicy>
+                </property>
+                <property name="maximumSize">
+                    <size>
+                        <width>25</width>
+                        <height>25</height>
+                    </size>
+                </property>
+                <property name="text">
+                    <string>&lt;</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>decreaseWindowPushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>77</x>
+                        <y>60</y>
+                        <width>25</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="sizePolicy">
+                    <sizepolicy>
+                        <hsizetype>0</hsizetype>
+                        <vsizetype>0</vsizetype>
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                    </sizepolicy>
+                </property>
+                <property name="maximumSize">
+                    <size>
+                        <width>25</width>
+                        <height>25</height>
+                    </size>
+                </property>
+                <property name="text">
+                    <string>&lt;</string>
+                </property>
+            </widget>
+            <widget class="QSlider">
+                <property name="name">
+                    <cstring>levelSlider</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>106</x>
+                        <y>88</y>
+                        <width>126</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="orientation">
+                    <enum>Horizontal</enum>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>increaseWindowPushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>236</x>
+                        <y>60</y>
+                        <width>25</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="sizePolicy">
+                    <sizepolicy>
+                        <hsizetype>0</hsizetype>
+                        <vsizetype>0</vsizetype>
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                    </sizepolicy>
+                </property>
+                <property name="maximumSize">
+                    <size>
+                        <width>25</width>
+                        <height>25</height>
+                    </size>
+                </property>
+                <property name="text">
+                    <string>&gt;</string>
+                </property>
+            </widget>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>windowTextLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>13</x>
+                        <y>60</y>
+                        <width>60</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="minimumSize">
+                    <size>
+                        <width>60</width>
+                        <height>20</height>
+                    </size>
+                </property>
+                <property name="text">
+                    <string>Window:</string>
+                </property>
+            </widget>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>levelTextLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>13</x>
+                        <y>88</y>
+                        <width>60</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="minimumSize">
+                    <size>
+                        <width>60</width>
+                        <height>20</height>
+                    </size>
+                </property>
+                <property name="text">
+                    <string>Level:</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>increaseLevelPushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>236</x>
+                        <y>88</y>
+                        <width>25</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="sizePolicy">
+                    <sizepolicy>
+                        <hsizetype>0</hsizetype>
+                        <vsizetype>0</vsizetype>
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                    </sizepolicy>
+                </property>
+                <property name="maximumSize">
+                    <size>
+                        <width>25</width>
+                        <height>25</height>
+                    </size>
+                </property>
+                <property name="text">
+                    <string>&gt;</string>
+                </property>
+            </widget>
+            <widget class="QSlider">
+                <property name="name">
+                    <cstring>windowSlider</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>106</x>
+                        <y>60</y>
+                        <width>126</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="orientation">
+                    <enum>Horizontal</enum>
+                </property>
+            </widget>
+            <widget class="QComboBox">
+                <property name="name">
+                    <cstring>selectColorTableComboBox</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>13</x>
+                        <y>34</y>
+                        <width>248</width>
+                        <height>22</height>
+                    </rect>
+                </property>
+            </widget>
+            <widget class="QSlider">
+                <property name="name">
+                    <cstring>yPlaneOpacitySlider</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>103</x>
+                        <y>182</y>
+                        <width>126</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="orientation">
+                    <enum>Horizontal</enum>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>decreaseXPlaneOpacityPushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>74</x>
+                        <y>154</y>
+                        <width>25</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="sizePolicy">
+                    <sizepolicy>
+                        <hsizetype>0</hsizetype>
+                        <vsizetype>0</vsizetype>
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                    </sizepolicy>
+                </property>
+                <property name="maximumSize">
+                    <size>
+                        <width>25</width>
+                        <height>25</height>
+                    </size>
+                </property>
+                <property name="text">
+                    <string>&lt;</string>
+                </property>
+            </widget>
+            <widget class="QSlider">
+                <property name="name">
+                    <cstring>xPlaneOpacitySlider</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>103</x>
+                        <y>154</y>
+                        <width>126</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="orientation">
+                    <enum>Horizontal</enum>
+                </property>
+            </widget>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>yPlaneOpacityTextLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>10</x>
+                        <y>182</y>
+                        <width>60</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="minimumSize">
+                    <size>
+                        <width>60</width>
+                        <height>20</height>
+                    </size>
+                </property>
+                <property name="text">
+                    <string>Y Plane:</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>increaseXPlaneOpacityPushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>233</x>
+                        <y>154</y>
+                        <width>25</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="sizePolicy">
+                    <sizepolicy>
+                        <hsizetype>0</hsizetype>
+                        <vsizetype>0</vsizetype>
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                    </sizepolicy>
+                </property>
+                <property name="maximumSize">
+                    <size>
+                        <width>25</width>
+                        <height>25</height>
+                    </size>
+                </property>
+                <property name="text">
+                    <string>&gt;</string>
+                </property>
+            </widget>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>xPlaneOpacityTextLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>10</x>
+                        <y>154</y>
+                        <width>60</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="minimumSize">
+                    <size>
+                        <width>60</width>
+                        <height>20</height>
+                    </size>
+                </property>
+                <property name="text">
+                    <string>X Plane:</string>
+                </property>
+            </widget>
+            <widget class="QCheckBox">
+                <property name="name">
+                    <cstring>sameOpacityCheckBox</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>10</x>
+                        <y>126</y>
+                        <width>248</width>
+                        <height>20</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Same Opacity for All Planes</string>
+                </property>
+                <property name="checked">
+                    <bool>true</bool>
+                </property>
+            </widget>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>zPlaneOpacityTextLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>10</x>
+                        <y>212</y>
+                        <width>60</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="minimumSize">
+                    <size>
+                        <width>60</width>
+                        <height>20</height>
+                    </size>
+                </property>
+                <property name="text">
+                    <string>Z Plane:</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>decreaseYPlaneOpacityPushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>74</x>
+                        <y>182</y>
+                        <width>25</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="sizePolicy">
+                    <sizepolicy>
+                        <hsizetype>0</hsizetype>
+                        <vsizetype>0</vsizetype>
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                    </sizepolicy>
+                </property>
+                <property name="maximumSize">
+                    <size>
+                        <width>25</width>
+                        <height>25</height>
+                    </size>
+                </property>
+                <property name="text">
+                    <string>&lt;</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>decreaseZPlaneOpacityPushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>74</x>
+                        <y>212</y>
+                        <width>25</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="sizePolicy">
+                    <sizepolicy>
+                        <hsizetype>0</hsizetype>
+                        <vsizetype>0</vsizetype>
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                    </sizepolicy>
+                </property>
+                <property name="maximumSize">
+                    <size>
+                        <width>25</width>
+                        <height>25</height>
+                    </size>
+                </property>
+                <property name="text">
+                    <string>&lt;</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>increaseYPlaneOpacityPushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>233</x>
+                        <y>182</y>
+                        <width>25</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="sizePolicy">
+                    <sizepolicy>
+                        <hsizetype>0</hsizetype>
+                        <vsizetype>0</vsizetype>
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                    </sizepolicy>
+                </property>
+                <property name="maximumSize">
+                    <size>
+                        <width>25</width>
+                        <height>25</height>
+                    </size>
+                </property>
+                <property name="text">
+                    <string>&gt;</string>
+                </property>
+            </widget>
+            <widget class="QSlider">
+                <property name="name">
+                    <cstring>zPlaneOpacitySlider</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>103</x>
+                        <y>212</y>
+                        <width>126</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="orientation">
+                    <enum>Horizontal</enum>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>increaseZPlaneOpacityPushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>233</x>
+                        <y>212</y>
+                        <width>25</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="sizePolicy">
+                    <sizepolicy>
+                        <hsizetype>0</hsizetype>
+                        <vsizetype>0</vsizetype>
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                    </sizepolicy>
+                </property>
+                <property name="maximumSize">
+                    <size>
+                        <width>25</width>
+                        <height>25</height>
+                    </size>
+                </property>
+                <property name="text">
+                    <string>&gt;</string>
+                </property>
+            </widget>
+        </widget>
+        <widget class="QWidget">
+            <property name="name">
+                <cstring>surfaceTabPage</cstring>
+            </property>
+            <attribute name="title">
+                <string>Surface</string>
+            </attribute>
+            <widget class="QLayoutWidget">
+                <property name="name">
+                    <cstring>layout8</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>7</x>
+                        <y>11</y>
+                        <width>256</width>
+                        <height>205</height>
+                    </rect>
+                </property>
+                <grid>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <property name="margin">
+                        <number>4</number>
+                    </property>
+                    <property name="spacing">
+                        <number>4</number>
+                    </property>
+                    <widget class="QCheckBox" row="3" column="0" rowspan="1" colspan="2">
+                        <property name="name">
+                            <cstring>smoothingCheckBox</cstring>
+                        </property>
+                        <property name="text">
+                            <string>Gaussian Smoothing</string>
+                        </property>
+                    </widget>
+                    <widget class="QLineEdit" row="5" column="1">
+                        <property name="name">
+                            <cstring>radiusFactorLineEdit</cstring>
+                        </property>
+                        <property name="alignment">
+                            <set>AlignRight</set>
+                        </property>
+                    </widget>
+                    <widget class="QLineEdit" row="4" column="1">
+                        <property name="name">
+                            <cstring>standardDeviationLineEdit</cstring>
+                        </property>
+                        <property name="alignment">
+                            <set>AlignRight</set>
+                        </property>
+                    </widget>
+                    <widget class="QLabel" row="5" column="0">
+                        <property name="name">
+                            <cstring>radiusFactorTextLabel</cstring>
+                        </property>
+                        <property name="text">
+                            <string>Radius Factor:</string>
+                        </property>
+                    </widget>
+                    <widget class="QLabel" row="4" column="0">
+                        <property name="name">
+                            <cstring>standardDeviationTextLabel</cstring>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>135</width>
+                                <height>24</height>
+                            </size>
+                        </property>
+                        <property name="text">
+                            <string>Standard Deviation:</string>
+                        </property>
+                    </widget>
+                    <widget class="QLabel" row="1" column="0">
+                        <property name="name">
+                            <cstring>contourTextLabel</cstring>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>115</width>
+                                <height>24</height>
+                            </size>
+                        </property>
+                        <property name="text">
+                            <string>Contour Value:</string>
+                        </property>
+                    </widget>
+                    <widget class="QLabel" row="2" column="0">
+                        <property name="name">
+                            <cstring>opacityTextLabel</cstring>
+                        </property>
+                        <property name="text">
+                            <string>Opacity (%):</string>
+                        </property>
+                    </widget>
+                    <widget class="QLineEdit" row="1" column="1">
+                        <property name="name">
+                            <cstring>contourLineEdit</cstring>
+                        </property>
+                        <property name="alignment">
+                            <set>AlignRight</set>
+                        </property>
+                    </widget>
+                    <widget class="QCheckBox" row="0" column="0" rowspan="1" colspan="2">
+                        <property name="name">
+                            <cstring>surfaceCheckBox</cstring>
+                        </property>
+                        <property name="text">
+                            <string>View Surface</string>
+                        </property>
+                    </widget>
+                    <widget class="QLineEdit" row="2" column="1">
+                        <property name="name">
+                            <cstring>opacityLineEdit</cstring>
+                        </property>
+                        <property name="text">
+                            <string>100</string>
+                        </property>
+                        <property name="maxLength">
+                            <number>3</number>
+                        </property>
+                        <property name="alignment">
+                            <set>AlignRight</set>
+                        </property>
+                    </widget>
+                </grid>
+            </widget>
+        </widget>
+        <widget class="QWidget">
+            <property name="name">
+                <cstring>transformTabPage</cstring>
+            </property>
+            <attribute name="title">
+                <string>Transform</string>
+            </attribute>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>availableTextLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>20</x>
+                        <y>5</y>
+                        <width>78</width>
+                        <height>20</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Available:</string>
+                </property>
+            </widget>
+            <widget class="QComboBox">
+                <property name="name">
+                    <cstring>transformComboBox</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>20</x>
+                        <y>28</y>
+                        <width>230</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+            </widget>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>transformTypeTextLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>20</x>
+                        <y>59</y>
+                        <width>78</width>
+                        <height>20</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Type:</string>
+                </property>
+            </widget>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>currentTypeTextLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>104</x>
+                        <y>59</y>
+                        <width>145</width>
+                        <height>20</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string></string>
+                </property>
+            </widget>
+            <widget class="QListBox">
+                <item>
+                    <property name="text">
+                        <string>New Item</string>
+                    </property>
+                </item>
+                <property name="name">
+                    <cstring>appliedTransformsListBox</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>20</x>
+                        <y>171</y>
+                        <width>230</width>
+                        <height>84</height>
+                    </rect>
+                </property>
+            </widget>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>appliedTransformsTextLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>20</x>
+                        <y>141</y>
+                        <width>230</width>
+                        <height>20</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Applied Transformations:</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>transformMatrixPushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>20</x>
+                        <y>84</y>
+                        <width>230</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Show Transformation Matrix</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>undoLastTransformPushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>21</x>
+                        <y>114</y>
+                        <width>230</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Undo Last Transformation</string>
+                </property>
+            </widget>
+        </widget>
+        <widget class="QWidget">
+            <property name="name">
+                <cstring>fixedTransformTabPage</cstring>
+            </property>
+            <attribute name="title">
+                <string>Fixed Transform</string>
+            </attribute>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>xTextLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>20</x>
+                        <y>22</y>
+                        <width>35</width>
+                        <height>28</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>X:</string>
+                </property>
+                <property name="alignment">
+                    <set>AlignCenter</set>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>undoLastFixedTransformPushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>20</x>
+                        <y>230</y>
+                        <width>230</width>
+                        <height>24</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Undo Last Transformation</string>
+                </property>
+            </widget>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>yTextLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>110</x>
+                        <y>22</y>
+                        <width>35</width>
+                        <height>28</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Y:</string>
+                </property>
+                <property name="alignment">
+                    <set>AlignCenter</set>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>xminus5PushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>20</x>
+                        <y>190</y>
+                        <width>40</width>
+                        <height>23</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>- 5</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>xplus5PushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>20</x>
+                        <y>150</y>
+                        <width>40</width>
+                        <height>23</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>+ 5</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>xminus1PushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>20</x>
+                        <y>110</y>
+                        <width>40</width>
+                        <height>23</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>- 1</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>xplus1PushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>20</x>
+                        <y>70</y>
+                        <width>40</width>
+                        <height>23</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>+ 1</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>yplus1PushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>110</x>
+                        <y>70</y>
+                        <width>40</width>
+                        <height>23</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>+ 1</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>yminus1PushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>110</x>
+                        <y>110</y>
+                        <width>40</width>
+                        <height>23</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>- 1</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>yplus5PushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>110</x>
+                        <y>150</y>
+                        <width>40</width>
+                        <height>23</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>+ 5</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>yminus5PushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>110</x>
+                        <y>190</y>
+                        <width>40</width>
+                        <height>23</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>- 5</string>
+                </property>
+            </widget>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>zTextLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>196</x>
+                        <y>22</y>
+                        <width>35</width>
+                        <height>28</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Z:</string>
+                </property>
+                <property name="alignment">
+                    <set>AlignCenter</set>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>zplus1PushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>196</x>
+                        <y>70</y>
+                        <width>40</width>
+                        <height>23</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>+ 1</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>zminus1PushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>196</x>
+                        <y>110</y>
+                        <width>40</width>
+                        <height>23</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>- 1</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>zplus5PushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>196</x>
+                        <y>150</y>
+                        <width>40</width>
+                        <height>23</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>+ 5</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>zminus5PushButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>196</x>
+                        <y>190</y>
+                        <width>40</width>
+                        <height>23</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>- 5</string>
+                </property>
+            </widget>
+        </widget>
+        <widget class="QWidget">
+            <property name="name">
+                <cstring>volumeTabPage</cstring>
+            </property>
+            <attribute name="title">
+                <string>Volume</string>
+            </attribute>
+            <widget class="QLayoutWidget">
+                <property name="name">
+                    <cstring>layout9</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>8</x>
+                        <y>25</y>
+                        <width>225</width>
+                        <height>69</height>
+                    </rect>
+                </property>
+                <grid>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <property name="margin">
+                        <number>4</number>
+                    </property>
+                    <property name="spacing">
+                        <number>4</number>
+                    </property>
+                    <widget class="QCheckBox" row="0" column="0">
+                        <property name="name">
+                            <cstring>volumeCheckBox</cstring>
+                        </property>
+                        <property name="text">
+                            <string>View Volume Rendering</string>
+                        </property>
+                    </widget>
+                    <widget class="QPushButton" row="1" column="0">
+                        <property name="name">
+                            <cstring>transferFunctionPushButton</cstring>
+                        </property>
+                        <property name="text">
+                            <string>Edit Transfer Function</string>
+                        </property>
+                    </widget>
+                </grid>
+            </widget>
+        </widget>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>bottomPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>BottomPushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>contourLineEdit</sender>
+        <signal>returnPressed()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>ContourLineEditTextChanged()</slot>
+    </connection>
+    <connection>
+        <sender>decreaseLevelPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>DecreaseLevelPushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>decreaseWindowPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>DecreaseWindowPushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>frontPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>FrontPushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>increaseLevelPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>IncreaseLevelPushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>increaseWindowPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>IncreaseWindowPushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>leftPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>LeftPushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>levelSlider</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>LevelSilderValueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>outlineCheckBox</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>OutlineCheckBoxToggled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>planes3DCheckBox</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>Planes3DCheckBoxToggled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>radiusFactorLineEdit</sender>
+        <signal>returnPressed()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>RadiusFactorLineEditTextChanged()</slot>
+    </connection>
+    <connection>
+        <sender>resetPlanesPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>ResetPlanesPushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>rightPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>RightPushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>selectColorTableComboBox</sender>
+        <signal>activated(int)</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>SelectColorTableComboBoxActivated(int)</slot>
+    </connection>
+    <connection>
+        <sender>smoothingCheckBox</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>SmoothingCheckBoxToggled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>standardDeviationLineEdit</sender>
+        <signal>returnPressed()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>StandardDeviationLineEditTextChanged()</slot>
+    </connection>
+    <connection>
+        <sender>surfaceCheckBox</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>SurfaceCheckBoxToggled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>topPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>TopPushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>windowSlider</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>WindowSliderValueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>xPlaneCheckBox</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>XPlaneCheckBoxToggled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>yPlaneCheckBox</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>YPlaneCheckBoxToggled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>zPlaneCheckBox</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>ZPlaneCheckBoxToggled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>volumeCheckBox</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>ViewVolumeCheckBoxToggled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>transferFunctionPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>TransferFunctionPushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>imageSettingsWidget</sender>
+        <signal>currentChanged(QWidget*)</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>ImageSettingsWidgetTabChanged(QWidget*)</slot>
+    </connection>
+    <connection>
+        <sender>opacityLineEdit</sender>
+        <signal>returnPressed()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>OpacityLineEditTextChanged()</slot>
+    </connection>
+    <connection>
+        <sender>decreaseXPlaneOpacityPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>DecreaseXPlaneOpacityPushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>xPlaneOpacitySlider</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>XPlaneOpacitySliderValueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>increaseXPlaneOpacityPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>IncreaseXPlaneOpacityPushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>decreaseYPlaneOpacityPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>DecreaseYPlaneOpacityPushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>yPlaneOpacitySlider</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>YPlaneOpacitySliderValueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>increaseYPlaneOpacityPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>IncreaseYPlaneOpacityPushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>decreaseZPlaneOpacityPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>DecreaseZPlaneOpacityPushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>zPlaneOpacitySlider</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>ZPlaneOpacitySliderValueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>increaseZPlaneOpacityPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>IncreaseZPlaneOpacityPushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>sameOpacityCheckBox</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>SameOpacityCheckBoxToggled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>transformComboBox</sender>
+        <signal>activated(const QString&amp;)</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>TransformFromListSelected(const QString&amp;)</slot>
+    </connection>
+    <connection>
+        <sender>transformMatrixPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>ShowTransformationMatrix()</slot>
+    </connection>
+    <connection>
+        <sender>imageSettingsWidget</sender>
+        <signal>currentChanged(QWidget*)</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>ImageSettingsWidgetTabChanged(QWidget*)</slot>
+    </connection>
+    <connection>
+        <sender>backPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>BackPushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>undoLastTransformPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>UndoLastTransformation()</slot>
+    </connection>
+    <connection>
+        <sender>xplus1PushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>YPlus1PushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>xminus1PushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>YMinus1PushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>xplus5PushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>XPlus5PushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>xminus5PushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>XMinus5PushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>yplus1PushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>XPlus1PushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>yminus1PushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>YMinus1PushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>yplus5PushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>YPlus5PushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>yminus5PushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>YMinus5PushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>zplus1PushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>ZPlus1PushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>zminus1PushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>ZMinus1PushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>zplus5PushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>ZPlus5PushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>zminus5PushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>ZMinus5PushButtonClicked()</slot>
+    </connection>
+    <connection>
+        <sender>undoLastFixedTransformPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>UndoLastTransformation()</slot>
+    </connection>
+    <connection>
+        <sender>contourLineEdit</sender>
+        <signal>lostFocus()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>ContourLineEditTextChanged()</slot>
+    </connection>
+    <connection>
+        <sender>opacityLineEdit</sender>
+        <signal>lostFocus()</signal>
+        <receiver>ImageObjectSettingsDialogBase</receiver>
+        <slot>OpacityLineEditTextChanged()</slot>
+    </connection>
+</connections>
+<slots>
+    <slot>SelectColorTableComboBoxActivated(int)</slot>
+    <slot>ViewVolumeCheckBoxToggled(bool)</slot>
+    <slot>DecreaseWindowPushButtonClicked( )</slot>
+    <slot>WindowSliderValueChanged(int)</slot>
+    <slot>IncreaseWindowPushButtonClicked()</slot>
+    <slot>DecreaseLevelPushButtonClicked()</slot>
+    <slot>LevelSilderValueChanged(int)</slot>
+    <slot>IncreaseLevelPushButtonClicked()</slot>
+    <slot>ResetPlanesPushButtonClicked()</slot>
+    <slot>OutlineCheckBoxToggled(bool)</slot>
+    <slot>XPlaneCheckBoxToggled(bool)</slot>
+    <slot>YPlaneCheckBoxToggled(bool)</slot>
+    <slot>ZPlaneCheckBoxToggled(bool)</slot>
+    <slot>Planes3DCheckBoxToggled(bool)</slot>
+    <slot>FrontPushButtonClicked()</slot>
+    <slot>TransformFromListSelected(const QString &amp;)</slot>
+    <slot>LeftPushButtonClicked()</slot>
+    <slot>RightPushButtonClicked()</slot>
+    <slot>TopPushButtonClicked()</slot>
+    <slot>BottomPushButtonClicked()</slot>
+    <slot>SurfaceCheckBoxToggled(bool)</slot>
+    <slot>SmoothingCheckBoxToggled(bool)</slot>
+    <slot>ContourLineEditTextChanged()</slot>
+    <slot>OpacityLineEditTextChanged()</slot>
+    <slot>StandardDeviationLineEditTextChanged()</slot>
+    <slot>RadiusFactorLineEditTextChanged()</slot>
+    <slot>TransferFunctionPushButtonClicked()</slot>
+    <slot>ImageSettingsWidgetTabChanged(QWidget *)</slot>
+    <slot>DecreaseXPlaneOpacityPushButtonClicked()</slot>
+    <slot>DecreaseYPlaneOpacityPushButtonClicked()</slot>
+    <slot>DecreaseZPlaneOpacityPushButtonClicked()</slot>
+    <slot>IncreaseXPlaneOpacityPushButtonClicked()</slot>
+    <slot>IncreaseYPlaneOpacityPushButtonClicked()</slot>
+    <slot>IncreaseZPlaneOpacityPushButtonClicked()</slot>
+    <slot>XPlaneOpacitySliderValueChanged(int)</slot>
+    <slot>YPlaneOpacitySliderValueChanged(int)</slot>
+    <slot>ZPlaneOpacitySliderValueChanged(int)</slot>
+    <slot>SameOpacityCheckBoxToggled(bool)</slot>
+    <slot>ShowTransformationMatrix()</slot>
+    <slot>BackPushButtonClicked()</slot>
+    <slot>UndoLastTransformation()</slot>
+    <slot>XPlus1PushButtonClicked()</slot>
+    <slot>YPlus1PushButtonClicked()</slot>
+    <slot>ZPlus1PushButtonClicked()</slot>
+    <slot>XPlus5PushButtonClicked()</slot>
+    <slot>YPlus5PushButtonClicked()</slot>
+    <slot>ZPlus5PushButtonClicked()</slot>
+    <slot>XMinus5PushButtonClicked()</slot>
+    <slot>YMinus5PushButtonClicked()</slot>
+    <slot>ZMinus5PushButtonClicked()</slot>
+    <slot>XMinus1PushButtonClicked()</slot>
+    <slot>YMinus1PushButtonClicked()</slot>
+    <slot>ZMinus1PushButtonClicked()</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>
