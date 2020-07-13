@@ -4,8 +4,8 @@
 # In[13]:
 
 
-get_ipython().run_line_magic('pylab', 'inline')
-import IPython.core.debugger as ipdb
+#get_ipython().run_line_magic('pylab', 'inline')
+#import IPython.core.debugger as ipdb
 import argparse as argp
 import nibabel as nib
 import numpy as np
@@ -13,19 +13,20 @@ import os
 from nilearn import plotting
 
 def dive(root):
-    print(root)
+    if root in converted_dirs:
+        return
     for f in os.listdir(root):
         path = rf'{root}/{f}'
-        print(path)
         if f.endswith('.mgz'):
             nii_path = convert(root, f)
-            clean_space(path)
+            clean_space(nii_path)
+            print(f'clean_space: {nii_path}')
         elif os.path.isdir(path):
             dive(path)
             
 def convert(root, f):
     os.system(rf'mri_convert {root}/{f} {root}/image.nii')
-    return rf'mri_convert {root}/{f} {root}/image.nii'
+    return rf'{root}/image.nii'
 
 
 # In[14]:
@@ -89,7 +90,7 @@ def clean_space(path):
 
 
 # In[20]:
-
+converted_dirs = set()
 
 if __name__ == '__main__':
     parser = argp.ArgumentParser(description='convert .mgz files to .nii')
@@ -97,28 +98,8 @@ if __name__ == '__main__':
     args = parser.parse_args()
     dive(args.path[0])
     
-
-
-# In[18]:
-
-
-clean_space('../../ADNI/002_S_0295/FreeSurfer_Cross-Sectional_Processing_brainmask/2006-04-18_08_20_30.0/S13408/mri/image.nii')
-
-
-# In[ ]:
-
-
-get_ipython().run_line_magic('debug', '')
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
+    with open('../ADNI/clipped.csv', 'r+') as csvfile:
+        freader = csv.reader(csvfile)
+        for row in freader:
+            converted_dirs |= set(row)
 
