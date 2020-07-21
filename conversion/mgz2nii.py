@@ -1,20 +1,12 @@
-#!/usr/bin/env python
-# coding: utf-8
 
-# In[13]:
-
-
-#get_ipython().run_line_magic('pylab', 'inline')
-#import IPython.core.debugger as ipdb
 import argparse as argp
 import nibabel as nib
 import numpy as np
-import os 
+import os
+import csv
 from nilearn import plotting
 
 def dive(root):
-    if root in converted_dirs:
-        return
     for f in os.listdir(root):
         path = rf'{root}/{f}'
         if f.endswith('.mgz'):
@@ -96,10 +88,13 @@ if __name__ == '__main__':
     parser = argp.ArgumentParser(description='convert .mgz files to .nii')
     parser.add_argument('path', type=str, nargs=1)
     args = parser.parse_args()
-    dive(args.path[0])
     
     with open('../ADNI/clipped.csv', 'r+') as csvfile:
         freader = csv.reader(csvfile)
         for row in freader:
             converted_dirs |= set(row)
-
+            break
+    print('dirs:', converted_dirs)
+            
+    dive(args.path[0])
+    
