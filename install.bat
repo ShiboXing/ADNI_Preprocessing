@@ -1,0 +1,1 @@
+conda install -c conda-forge nibabel nilearn scikit-image
